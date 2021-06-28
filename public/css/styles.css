@@ -401,6 +401,13 @@ i{
     color: white;
     background-color: #B18ABF;
     margin: 50px auto 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-wrapper{ 
+    width: 75%;
 }
  
 .review-carousel{
@@ -410,6 +417,8 @@ i{
 .review-card{
     display: flex;
     /* width: 1000px; */
+    justify-content: center;
+    align-items: center;
     margin: 20px auto 20px auto;
 }
 .star{
@@ -480,7 +489,7 @@ i{
 
 /*|||||||||||||||||||||||| back to top btn styles ||||||||||||||||||||||||||*/
 .back-to-top{
-    color: aliceblue;
+    color: alicebflue;
     position: relative;
     right:23%;
     bottom: 19%;
