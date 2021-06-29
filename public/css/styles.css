@@ -361,14 +361,14 @@ i {
 
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
 .card {
-  color: rgb(233, 232, 231);
+  color: rgb(230, 230, 230);
   border: none;
   transition-duration: 200ms;
   transition-property: transform;
   transition-timing-function: ease-in;
 }
 .card:hover {
-  color: #fac20b;
+  color: #fff;
   transform: translateY(-20px);
   z-index: 4;
 }
