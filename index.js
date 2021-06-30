@@ -24,8 +24,8 @@ app.get("/ourClinic", function(req,res){
     res.render("ourClinic", {MAP_KEY: process.env.MAP_KEY});
 });
 
-app.get("/ourDoctors", function(req,res){
-    res.render("ourDoctors", {MAP_KEY: process.env.MAP_KEY});
+app.get("/ourDoctors/", function(req,res){
+    res.render("ourDoctors/", {MAP_KEY: process.env.MAP_KEY});
 });
 
 app.get("/testimonials", function(req,res){
