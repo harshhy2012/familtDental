@@ -181,10 +181,14 @@ i {
 /*|||||||||||||||||||||||| fixed nav bar ||||||||||||||||||||||||||*/
 .navbar-brand {
   margin: 0;
-  width: 0;
+  padding: 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 .brand-name {
-  display: inline-block;
+  height: fit-content;
   font-size: 1.5em;
   font-weight: normal;
   color: black;
@@ -494,7 +498,7 @@ i {
   list-style-type: none;
   list-style-position: initial;
   padding-top: 5%;
-  margin: 0;
+  margin: 0 !important;
 }
 .fa-ul > i{
   margin-right: 25px;
@@ -859,4 +863,11 @@ i {
 }
 .doc-wrapper{
   margin: auto auto;
+}
+
+/******************************About Us styles***********************************/
+
+.x-accordion-heading .x-accordion-toggle {
+  color: #aaaaaa;
+  background-color: #b18abf;
 }

@@ -20,16 +20,20 @@ app.get("/", function(req, res){
     res.render("home", {MAP_KEY: process.env.MAP_KEY});
 });
 
+app.get("/home", function(req, res){
+    res.render("home", {MAP_KEY: process.env.MAP_KEY});
+});
+
 app.get("/ourClinic", function(req,res){
     res.render("ourClinic", {MAP_KEY: process.env.MAP_KEY});
 });
 
-app.get("/ourDoctors/", function(req,res){
-    res.render("ourDoctors/", {MAP_KEY: process.env.MAP_KEY});
+app.get("/ourDoctors", function(req,res){
+    res.render("ourDoctors", {MAP_KEY: process.env.MAP_KEY});
 });
 
-app.get("/testimonials", function(req,res){
-    res.render("appointment", {MAP_KEY: process.env.MAP_KEY});
+app.get("/implants", function(req,res){
+    res.render("implants", {MAP_KEY: process.env.MAP_KEY});
 });
 
 app.get("/admin", function(req,res){
