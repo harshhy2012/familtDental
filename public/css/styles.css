@@ -1,5 +1,5 @@
 html {
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -478,7 +478,7 @@ i {
   text-align: justify;
   padding: 2% 5% 1% 2%;
 }
-.review-text > h4{
+.review-text > h4 {
   padding-bottom: 10%;
 }
 
@@ -494,13 +494,13 @@ i {
   color: white;
   width: 65%;
 }
-.fa-ul{
+.fa-ul {
   list-style-type: none;
   list-style-position: initial;
   padding-top: 5%;
   margin: 0 !important;
 }
-.fa-ul > i{
+.fa-ul > i {
   margin-right: 25px;
   color: #fac20b;
 }
@@ -850,24 +850,46 @@ i {
 
 /*/////////////////////////////Our Doctors///////////////////////////////////////*/
 
-.photo-desc{
+.photo-desc {
   padding: 0 !important;
   margin: 0;
   font-size: small;
 }
-.doc-row{
+.doc-row {
   margin: 7% auto;
 }
-.doc-text{
+.doc-text {
   text-align: justify;
 }
-.doc-wrapper{
+.doc-wrapper {
   margin: auto auto;
 }
 
-/******************************About Us styles***********************************/
+/******************************Implants styles***********************************/
+
+/*/////////////////////////////hero///////////////////////////////////////*/
+
+.hero-row{
+  padding: 50px 200px 50px 200px;
+  
+}
+.hero-row > p{
+  text-align: justify;
+  margin: 10px auto;
+}
+
+.hero-row h1{
+  margin: 10px auto;
+}
+
+
+/*/////////////////////////////FAQ///////////////////////////////////////*/
 
 .x-accordion-heading .x-accordion-toggle {
   color: #aaaaaa;
   background-color: #b18abf;
+}
+accordion-button:active{
+  color: #b18abf;
+  background-color: #b18abf7c;
 }
