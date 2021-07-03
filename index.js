@@ -59,6 +59,10 @@ app.get("/login", function(req,res){
     res.render("login");
 });
 
+app.get("/invisalign", function(req, res){
+    res.render("invisalign");
+});
+
 app.listen(3000, function(){
     console.log("Server is running at port 3000.")
 });

@@ -566,7 +566,7 @@ i {
 
 /*|||||||||||||||||||||||| back to top btn styles ||||||||||||||||||||||||||*/
 .back-to-top {
-  color: alicebflue;
+  color: aliceblue;
   position: relative;
   right: 23%;
   bottom: 19%;
@@ -706,6 +706,24 @@ i {
 /********************************** Blog ***********************************/
 
 /* stylelint-disable selector-list-comma-newline-after */
+.blog-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-head{
+  margin: 0 10%;
+  text-align: justify;
+}
+
+.sidebar{
+  padding: 20px 100px 0 175px;
+}
+
+.blog-tile{
+  padding: 1%;
+}
+
 .bg-fd {
   background-color: #b18abf;
 }
@@ -750,6 +768,10 @@ i {
 /*
    * Blog posts
    */
+
+.blog-grid{
+  padding: 0 0 0 10%;
+}
 .blog-post {
   margin-bottom: 4rem;
 }
@@ -759,6 +781,15 @@ i {
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
+  color: #727272;
+}
+.justify-text, .list-unstyled{
+  text-align: justify;
+}
+a{
+  text-decoration: none;
+}
+.list-unstyled{
   color: #727272;
 }
 
@@ -867,29 +898,87 @@ i {
 
 /******************************Implants styles***********************************/
 
+.implant-section{
+  margin: 4% auto 4% auto;
+  padding: 10px 15px 10px 15px;
+  border: #f2f2f2 solid 1px;
+  box-shadow: 0px 0px 10px 10px #f2f2f2;
+}
+
 /*/////////////////////////////hero///////////////////////////////////////*/
 
 .hero-row{
-  padding: 50px 200px 50px 200px;
+  padding: 20px 0px 50px 0px;
   
 }
 .hero-row > p{
   text-align: justify;
-  margin: 10px auto;
+  margin: 2% auto;
+  padding: 0 5%;
 }
 
 .hero-row h1{
   margin: 10px auto;
 }
 
+/*/////////////////////////////types///////////////////////////////////////*/
 
+.implant-type-row{
+  margin: 4% auto 0px auto;
+}
+
+.implant-types{
+  list-style-type: none;
+  padding: 30px;
+}
+
+.type-list > li{
+  margin: 50px;
+}
+
+.type-list > li:last-child{
+  margin-bottom: 0;
+}
+
+.type-row{
+  padding: 10px 15px 10px 15px;
+  border: #f2f2f2 solid 1px;
+  box-shadow: 0px 0px 5px 5px #f2f2f2;
+}
 /*/////////////////////////////FAQ///////////////////////////////////////*/
+
+
+
+.faq-section{
+  padding: 50px 50px 50px 50px;
+
+}
+.faq-section > h1{
+  margin: 0% auto 3% auto;
+}
 
 .x-accordion-heading .x-accordion-toggle {
   color: #aaaaaa;
   background-color: #b18abf;
 }
-accordion-button:active{
+.accordion-button:active{
   color: #b18abf;
   background-color: #b18abf7c;
+}
+.accordion-button:not(.collapsed) {
+  color: #b18abf;
+  background-color: #b18abf17;
+}
+
+.accordion-button:focus{
+  border-color: #b18abf83;
+  box-shadow:  0 0 0.25rem #b18abf83;
+}
+
+.accordion-button:not(.collapsed)::after{
+  filter: grayscale( );
+}
+
+.accordion-body{
+  text-align: justify;
 }
