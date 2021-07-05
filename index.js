@@ -16,6 +16,19 @@ mongoose.createConnection("mongodb://localhost:27017/userDB", {useNewUrlParser: 
 mongoose.createConnection("mongodb://localhost:27017/adminDB", {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
+
+//------------------- blog ------------------------//
+
+const postSchema = {
+    title: String,
+    topic: String,
+    originDate: {type: Date, default: Date.now},
+    content: String
+  };
+
+const Post = mongoose.model("Post", postSchema);
+//------------------- ---- ------------------------//
+
 app.get("/", function(req, res){
     res.render("home", {MAP_KEY: process.env.MAP_KEY});
 });
@@ -65,6 +78,10 @@ app.get("/invisalign", function(req, res){
 
 app.get("/treatments", function(req, res){
     res.render("treatments");
+});
+
+app.get("/backdoor", function(req,res){
+    res.render("backdoor");
 });
 
 app.listen(3000, function(){
