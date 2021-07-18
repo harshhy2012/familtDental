@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
 // const session = require("express-session");
 // const passport = require("passport");
 
@@ -96,12 +96,31 @@ app.post("/addBlog", function (req, res) {
 // });
 
 //------------------------ ---- ------------------------------//
+let success = false;
 app.get("/", function (req, res) {
-    res.render("home");
+    res.render("home", {success});
 });
 
-app.get("/home", function (req, res) {
-    res.render("home");
+app.post("/form", function (req, res) {
+    console.log("chal gya")
+    const post = new Post({
+        title: req.body.your_name,
+        content: req.body.phone,
+        email: req.body.email,
+        message: req.body.message
+      });
+    
+    
+    post.save(function(err){
+        if (!err){
+            success = true;
+            res.redirect("/", {success});
+        }
+        else{
+            console.log(err);
+            res.redirect("/", {success});
+        }
+      });
 });
 
 app.get("/ourClinic", function (req, res) {
@@ -126,9 +145,7 @@ app.get("/treatments", function (req, res) {
 
 app.get("/blog", function (req, res) {
     // Post.find({}, function(err, posts){
-    //     res.render("blog", {
-    //       posts: posts
-    //       });
+        res.render("blog");
     //   });
 });
 
@@ -149,7 +166,7 @@ app.post("/admin", function (req, res) {
                     expiresIn: "2h"
                 });
                 console.log(token);
-                res.redirect("/backdoor");
+                res.redirect("admin/backdoor");
             }
             else {
                 console.log("wrong password");
@@ -164,24 +181,33 @@ app.post("/admin", function (req, res) {
     }
 });
 
-console.log(token);
 
-app.get("/backdoor", function (req, res) {
-    try{
-        jwt.verify(token, process.env.JWT_KEY, function(err,  decoded){
-            console.log({decoded, err});
-            if(!err){
-                res.redirect("/backdoor");
-            }
-            else{
-                res.redirect("/admin");
-            }
-        }); 
-    }
-    catch(error){
-        res.redirect("/admin");
-    }
-});             
+
+app.get("/admin/backdoor",function(req,res){
+    res.render("backdoor");
+});
+
+app.post("/admin/backdoor", function(req,res){
+
+});
+
+app.get("/admin/addblog", function(req,res){
+    res.render("addBlog");
+});
+
+app.post("/admin/addblog", function(req,res){
+    
+});
+
+app.get("/admin/addAlbum", function(req,res){
+    res.render("addAlbum");
+});
+
+app.post("/admin/addAlbum", function(req,res){
+    
+});
+
+console.log(token);            
 
 app.listen(3000, function () {
     console.log("Server is running at port 3000.");
