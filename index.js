@@ -10,82 +10,81 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 let token = "";
-app.set('views', './views');
-app.set('view engine', 'ejs');
+app.set("views", "./views");
+app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
 //------------------- bcrypt passwords ------------------------//
 
-let admin = { mahima: "",
-            tushita: ""
-};
+let admin = { mahima: "", tushita: "" };
 
 const pws = process.env.pw.split(",");
 
 bcrypt.hash(pws[0], parseInt(process.env.SALT_ROUNDS), function (err, hash) {
-    admin.mahima = hash;
+  admin.mahima = hash;
 });
 
 bcrypt.hash(pws[1], process.env.SALT_ROUNDS, function (err, hash) {
-    admin.tushita = hash;
+  admin.tushita = hash;
 });
-
-
 
 //------------------- ---------------- ------------------------//
 
 //------------------- blog ------------------------//
 
-mongoose.createConnection("mongodb+srv://harshhy2012:"+process.env.db_pw+"@cluster0.kujzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(
+  "mongodb+srv://harshhy2012:" +
+    process.env.db_pw +
+    "@cluster0.kujzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
-    name: String,
-    phone: String,
-    email: String,
-    message: String
+  name: String,
+  phone: String,
+  email: String,
+  message: String,
 });
 
 const User = mongoose.model("User", userSchema);
 
 const blogpostSchema = new mongoose.Schema({
-    title: String,
-    topic: String,
-    originDate: { type: Date, default: Date.now },
-    content: String
+  title: String,
+  topic: String,
+  originDate: { type: Date, default: Date.now },
+  content: String,
 });
 
 const Blogpost = mongoose.model("Blogpost", blogpostSchema);
 
 const imageSchema = new mongoose.Schema({
-    link: String,
-    desc: String
+  link: String,
+  desc: String,
 });
 
 const Image = mongoose.model("Image", imageSchema);
-
 
 //------------------- ---- ------------------------//
 
 //------------------- blog form input ------------------------//
 
 app.get("/addBlog", function (req, res) {
-    res.render("addBlog");
+  res.render("addBlog");
 });
 
 app.post("/addBlog", function (req, res) {
-    const blogpost = new Blogpost({
-        title: req.body.postTitle,
-        topic: req.body.postTopic,
-        content: req.body.postBody
-    });
-    blogpost.save(function (err) {
-        if (!err) {
-            res.redirect("/");
-        }
-    });
+  const blogpost = new Blogpost({
+    title: req.body.postTitle,
+    topic: req.body.postTopic,
+    content: req.body.postBody,
+  });
+  blogpost.save(function (err) {
+    if (!err) {
+      res.redirect("/");
+    }
+  });
 });
 //------------------------ ---- ------------------------------//
 
@@ -98,117 +97,107 @@ app.post("/addBlog", function (req, res) {
 //------------------------ ---- ------------------------------//
 let success = false;
 app.get("/", function (req, res) {
-    res.render("home", {success});
+  res.render("home", { success });
 });
 
 app.post("/", function (req, res) {
-    console.log("chal gya")
-    const user = new User({
-        title: req.body.your_name,
-        content: req.body.phone,
-        email: req.body.email,
-        message: req.body.message
-      });
-    
-    
-    user.save(function(err){
-        if (!err){
-            success = true;
-            res.redirect("/");
-        }
-        else{
-            console.log(err);
-            res.redirect("/");
-        }
-      });
+  console.log("chal gya");
+  const user = new User({
+    title: req.body.your_name,
+    content: req.body.phone,
+    email: req.body.email,
+    message: req.body.message,
+  });
+
+  user.save(function (err) {
+    if (!err) {
+      success = true;
+      res.redirect("/");
+    } else {
+      console.log(err);
+      res.redirect("/");
+    }
+  });
 });
 
 app.get("/ourClinic", function (req, res) {
-    res.render("ourClinic");
+  res.render("ourClinic");
 });
 
 app.get("/ourDoctors", function (req, res) {
-    res.render("ourDoctors");
+  res.render("ourDoctors");
 });
 
 app.get("/invisalign", function (req, res) {
-    res.render("invisalign");
+  res.render("invisalign");
 });
 
 app.get("/implants", function (req, res) {
-    res.render("implants");
+  res.render("implants");
 });
 
 app.get("/treatments", function (req, res) {
-    res.render("treatments");
+  res.render("treatments");
 });
 
 app.get("/blog", function (req, res) {
-    // Post.find({}, function(err, posts){
-        res.render("blog");
-    //   });
+  // Post.find({}, function(err, posts){
+  res.render("blog");
+  //   });
 });
 
 app.get("/admin", function (req, res) {
-    res.render("admin");
+  res.render("admin");
 });
 
 app.post("/admin", function (req, res) {
-    const username = req.body.user_name;
-    if(admin.hasOwnProperty(username)){
-        bcrypt.compare(req.body.pass, admin[username], function (err, result) {
-            // console.log({username, result});
-            if(result){
-                token = jwt.sign({
-                    user_name: username
-                }, process.env.JWT_KEY,
-                {
-                    expiresIn: "2h"
-                });
-                console.log(token);
-                res.redirect("admin/backdoor");
-            }
-            else {
-                console.log("wrong password");
-                res.redirect("/admin");
-            }
-            
-        });
-    }
-    else{
-        console.log("Wrong username");
-        res.redirect('/admin');
-    }
+  const username = req.body.user_name;
+  if (admin.hasOwnProperty(username)) {
+    bcrypt.compare(req.body.pass, admin[username], function (err, result) {
+      // console.log({username, result});
+      if (result) {
+        token = jwt.sign(
+          {
+            user_name: username,
+          },
+          process.env.JWT_KEY,
+          {
+            expiresIn: "2h",
+          }
+        );
+        console.log(token);
+        res.redirect("admin/backdoor");
+      } else {
+        console.log("wrong password");
+        res.redirect("/admin");
+      }
+    });
+  } else {
+    console.log("Wrong username");
+    res.redirect("/admin");
+  }
 });
 
-
-
-app.get("/admin/backdoor",function(req,res){
-    res.render("backdoor");
+app.get("/admin/backdoor", function (req, res) {
+  res.render("backdoor");
 });
 
-app.post("/admin/backdoor", function(req,res){
+app.post("/admin/backdoor", function (req, res) {});
 
+app.get("/admin/addblog", function (req, res) {
+  res.render("addBlog");
 });
 
-app.get("/admin/addblog", function(req,res){
-    res.render("addBlog");
+app.post("/admin/addblog", function (req, res) {});
+
+app.get("/admin/addAlbum", function (req, res) {
+  res.render("addAlbum");
 });
 
-app.post("/admin/addblog", function(req,res){
-    
-});
+app.post("/admin/addAlbum", function (req, res) {});
 
-app.get("/admin/addAlbum", function(req,res){
-    res.render("addAlbum");
-});
-
-app.post("/admin/addAlbum", function(req,res){
-    
-});
-
-console.log(token);            
+console.log(token);
 
 app.listen(3000, function () {
-    console.log("Server is running at port 3000.");
+  console.log("Server is running at port 3000.");
 });
