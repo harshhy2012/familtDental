@@ -38,7 +38,7 @@ bcrypt.hash(pws[1], process.env.SALT_ROUNDS, function (err, hash) {
 
 //------------------- blog ------------------------//
 
-mongoose.createConnection("mongodb://localhost:27017/familyDentalDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.createConnection("mongodb+srv://harshhy2012:"+process.env.db_pw+"@cluster0.kujzt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
@@ -50,14 +50,14 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-const postSchema = new mongoose.Schema({
+const blogpostSchema = new mongoose.Schema({
     title: String,
     topic: String,
     originDate: { type: Date, default: Date.now },
     content: String
 });
 
-const Post = mongoose.model("Post", postSchema);
+const Blogpost = mongoose.model("Blogpost", blogpostSchema);
 
 const imageSchema = new mongoose.Schema({
     link: String,
@@ -76,12 +76,12 @@ app.get("/addBlog", function (req, res) {
 });
 
 app.post("/addBlog", function (req, res) {
-    const post = new Post({
+    const blogpost = new Blogpost({
         title: req.body.postTitle,
         topic: req.body.postTopic,
         content: req.body.postBody
     });
-    post.save(function (err) {
+    blogpost.save(function (err) {
         if (!err) {
             res.redirect("/");
         }
@@ -103,7 +103,7 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
     console.log("chal gya")
-    const post = new Post({
+    const user = new User({
         title: req.body.your_name,
         content: req.body.phone,
         email: req.body.email,
@@ -111,14 +111,14 @@ app.post("/", function (req, res) {
       });
     
     
-    post.save(function(err){
+    user.save(function(err){
         if (!err){
             success = true;
-            res.redirect("/", {success});
+            res.redirect("/");
         }
         else{
             console.log(err);
-            res.redirect("/", {success});
+            res.redirect("/");
         }
       });
 });
