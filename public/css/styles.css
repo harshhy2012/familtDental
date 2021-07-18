@@ -49,13 +49,13 @@ i {
 
 .form-section input[type="text"] {
   color: #fac20b !important;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .form-section input[type="tel"] {
   color: #fac20b !important;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -101,24 +101,31 @@ i {
 }
 .form-floating.success i.fa-check-circle{
   visibility: visible;
+  z-index: 2;
+  background-color: white;
   color: #2ecc71; 
 }
 
 .form-floating.error i.fa-exclamation-circle{
   visibility: visible;
+  z-index: 2;
+  background-color: white;
   color: #e74c3c;
 }
 
 .form-floating.error small{
   color: #e74c3c;
+  top: 5%;
+  left:2%;
   visibility: visible;
 }
 
 .btn-shift {
+  color: #b18abf;
   position: relative;
+  z-index: 10000;
   bottom: 10px;
-  left: 35px;
-  color: white;
+  left: 10px;
 }
 .btn-shift:hover {
   color: #b18abf;
@@ -137,7 +144,7 @@ i {
   font-size: 2rem;
 }
 .modal-footer {
-  padding-left: 45px;
+  padding-right: 4%;
 }
 .modal-header,
 .modal-conent,

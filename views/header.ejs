@@ -51,7 +51,7 @@
             </div>
             <div class="modal-body">
                 <div class="form-section">
-                    <form class="form" id="appointmentForm" action='/form' method="POST">
+                    <form class="form" action='/' method="post" id="formID">
                         <div class="form-floating">
                             
                             <input type="text" placeholder="Your Name" class="form-control" id="your_name" >
@@ -69,7 +69,7 @@
                             <small>Error Message</small>
                         </div>
                         <div class="form-floating">
-                            <input type="email" placeholder="abc@def.com" class="form-control" id="email" >
+                            <input type="email" placeholder="abc@def.com" class="form-control" id="email">
                             <label for="email"><i class="fas fa-envelope modal-icon"></i> Email
                                 address</label>
                             <i class="fas fa-check-circle"></i>
@@ -85,9 +85,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary submit-btn" data-bs-dismiss="modal"
-                id="submit-modal" data-bs-toggle="modal"
-                data-bs-target="#FormFillModalToggle" form="appointmentForm">Submit</button>
+                <button type="submit" class="btn btn-primary submit-btn"
+                id="submit-modal" data-bs-toggle="modal" form="formID">Submit</button>
             <button type="button" class="btn btn-secondary cancel-btn"
                 data-bs-dismiss="modal">Close</button>
             </div>
@@ -147,12 +146,11 @@
     </div> -->
 
     <!-- Success Message -->
-    <% if(locals.success) {%>
         <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
             tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
                 <div class="modal-content success-modal">
-                    <div class="modal-header">
+                    <div class="modal-header" id="inputFormModa">
                         <h2 class="modal-title" id="successModalToggle"><i class="far fa-check-circle"></i> Thank you,
                             your
                             response has been recorded, we will contact you shortly!</h2>
@@ -161,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <% } else{%>
+
             <!-- failure Message -->
             <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
                 tabindex="-1">
@@ -177,7 +175,6 @@
                     </div>
                 </div>
             </div>
-            <% } %>
 
                 <header id="header">
 
@@ -205,7 +202,7 @@
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pad">
                         <div class="container-fluid">
-                            <a href="/home" class="navbar-brand">
+                            <a href="/" class="navbar-brand">
 
                                 <img style="margin: 10px;" src="images/logo-02.png" alt="family dental logo" height="70"
                                     width="70" class="d-inline-block">
@@ -222,7 +219,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                     <li class="nav-item nav-hover">
-                                        <a class="nav-link active nav-hover" aria-current="page" href="/home">Home</a>
+                                        <a class="nav-link active nav-hover" aria-current="page" href="/">Home</a>
                                     </li>
 
                                     <li class="nav-item dropdown link-hover nav-hover" id="myDropdown">

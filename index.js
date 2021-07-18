@@ -101,7 +101,7 @@ app.get("/", function (req, res) {
     res.render("home", {success});
 });
 
-app.post("/form", function (req, res) {
+app.post("/", function (req, res) {
     console.log("chal gya")
     const post = new Post({
         title: req.body.your_name,
