@@ -41,61 +41,64 @@
 <body>
 
     <!-- Modal -->
-    <div class="modal fade" id="appointmentModal" tabindex="-1" role="form" aria-labelledby="appointmentModalTitle" aria-hidden="true">
+    <div class="modal fade" id="appointmentModal" tabindex="-1" role="form" aria-labelledby="appointmentModalTitle"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="form">
-          <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title form-title">Book an Appointment Now!</h5>
-                <button type="button" class="btn btn-shift" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="far fa-times-circle fa-2x btn-shift"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="form-section">
-                    <form class="form" action='/' method="post" id="formID">
-                        <div class="form-floating">
-                            
-                            <input type="text" placeholder="Your Name" class="form-control" id="your_name" >
-                            <label for="floatingInput"><i class="fas fa-user modal-icon"></i> Name</label>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error Message</small>
-                        </div>
-                        <div class="form-floating ">
-                            <input type="text" placeholder="0123456789" class="form-control" id="phone" >
-                            <label for="phone"><i class="fas fa-phone-alt modal-icon"></i> Phone
-                                Number</label>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error Message</small>
-                        </div>
-                        <div class="form-floating">
-                            <input type="email" placeholder="abc@def.com" class="form-control" id="email">
-                            <label for="email"><i class="fas fa-envelope modal-icon"></i> Email
-                                address</label>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error Message</small>
-                        </div>
-                        <div class="form-floating">
-                            <textarea rows=30 class="form-control" name="message"
-                                                 placeholder="Your Message.."></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                    </form>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title form-title">Book an Appointment Now!</h5>
+                    <button type="button" class="btn btn-shift" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="far fa-times-circle fa-2x btn-shift"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-section">
+                        <form class="form" action='/' method="post" id="formID">
+                            <div class="form-floating">
+
+                                <input type="text" placeholder="Your Name" name="userName" class="form-control"
+                                    id="your_name">
+                                <label for="floatingInput"><i class="fas fa-user modal-icon"></i> Name</label>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-floating ">
+                                <input type="text" placeholder="0123456789" name="phoneNumber" class="form-control"
+                                    id="phone">
+                                <label for="phone"><i class="fas fa-phone-alt modal-icon"></i> Phone
+                                    Number</label>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" placeholder="abc@def.com" name="emailID" class="form-control"
+                                    id="email">
+                                <label for="email"><i class="fas fa-envelope modal-icon"></i> Email
+                                    address</label>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>Error Message</small>
+                            </div>
+                            <div class="form-floating">
+                                <textarea rows=30 class="form-control" name="message"
+                                    placeholder="Your Message.."></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary submit-btn" id="submit-modal" data-bs-toggle="modal"
+                        form="formID">Submit</button>
+                    <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary submit-btn"
-                id="submit-modal" data-bs-toggle="modal" form="formID">Submit</button>
-            <button type="button" class="btn btn-secondary cancel-btn"
-                data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
-    
-    
+
+
 
 
     <!-- <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModal" aria-hidden="true">
@@ -146,131 +149,127 @@
     </div> -->
 
     <!-- Success Message -->
-        <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
-            tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
-                <div class="modal-content success-modal">
-                    <div class="modal-header" id="inputFormModa">
-                        <h2 class="modal-title" id="successModalToggle"><i class="far fa-check-circle"></i> Thank you,
-                            your
-                            response has been recorded, we will contact you shortly!</h2>
-                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+    <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
+            <div class="modal-content success-modal">
+                <div class="modal-header" id="inputFormModa">
+                    <h2 class="modal-title" id="successModalToggle"><i class="far fa-check-circle"></i> Thank you,
+                        your
+                        response has been recorded, we will contact you shortly!</h2>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </div>
         </div>
+    </div>
 
-            <!-- failure Message -->
-            <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
-                tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
-                    <div class="modal-content success-modal">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="successModalToggle"><i class="far fa-times-circle fa-2x"></i>
-                                Something
-                                Went Wrong! Please try again Later</h2>
-                            <button type="button" class="btn" id="modal-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                    </div>
+    <!-- failure Message -->
+    <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
+            <div class="modal-content success-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="successModalToggle"><i class="far fa-times-circle fa-2x"></i>
+                        Something
+                        Went Wrong! Please try again Later</h2>
+                    <button type="button" class="btn" id="modal-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+
+        <section class="container-fluid info-bar">
+            <div class="row">
+                <div class="col-md-6 time">
+                    <i class="fas fa-clock head-icon"></i>
+                    Mon-Sun 9:00AM-9:00PM, <span>Emergency 24/7</span>
+                </div>
+                <div class="col-lg-3 mail">
+                    <a href="mailto:contactus@familydentaldwarka.in">
+                        <i class="fas fa-envelope head-icon"></i>
+                        contactus@familydentaldwarka.in
+                    </a>
+                </div>
+                <div class="col-lg-3 phone">
+                    <i class="fas fa-phone head-icon"></i>
+                    +91 88511 95050, +91 95824 74046</>
                 </div>
             </div>
 
-                <header id="header">
+        </section>
 
-                    <section class="container-fluid info-bar">
-                        <div class="row">
-                            <div class="col-md-6 time">
-                                <i class="fas fa-clock head-icon"></i>
-                                Mon-Sun 9:00AM-9:00PM, <span>Emergency 24/7</span>
-                            </div>
-                            <div class="col-lg-3 mail">
-                                <a href="mailto:contactus@familydentaldwarka.in">
-                                    <i class="fas fa-envelope head-icon"></i>
-                                    contactus@familydentaldwarka.in
-                                </a>
-                            </div>
-                            <div class="col-lg-3 phone">
-                                <i class="fas fa-phone head-icon"></i>
-                                +91 88511 95050, +91 95824 74046</>
-                            </div>
-                        </div>
+        <hr class="info-bar horizontal-rule">
 
-                    </section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pad">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand">
 
-                    <hr class="info-bar horizontal-rule">
+                    <img style="margin: 10px;" src="images/logo-02.png" alt="family dental logo" height="70" width="70"
+                        class="d-inline-block">
 
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pad">
-                        <div class="container-fluid">
-                            <a href="/" class="navbar-brand">
-
-                                <img style="margin: 10px;" src="images/logo-02.png" alt="family dental logo" height="70"
-                                    width="70" class="d-inline-block">
-
-                                <h1 class="brand-name">
-                                    <bold>Family</bold> Dental
-                                </h1>
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                    <li class="nav-item nav-hover">
-                                        <a class="nav-link active nav-hover" aria-current="page" href="/">Home</a>
-                                    </li>
-
-                                    <li class="nav-item dropdown link-hover nav-hover" id="myDropdown">
-                                        <a class="nav-link dropdown-toggle nav-hover" href="#"
-                                            data-bs-toggle="dropdown">About
-                                            Us</a>
-                                        <ul class="dropdown-menu">
-                                            <li> <a class="dropdown-item nav-hover" href="/ourClinic">Our Clinic</a>
-                                            </li>
-                                            <li> <a class="dropdown-item nav-hover" href="/ourDoctors">Our Team
-                                                    &raquo; </a>
-                                                <ul class="submenu dropdown-menu">
-                                                    <li><a class="dropdown-item nav-hover"
-                                                            href="/ourDoctors#tushita">Dr. Tushita</a></li>
-                                                    <li><a class="dropdown-item nav-hover" href="/OurDoctors#mahima">Dr.
-                                                            Mahima</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <li class="nav-item nav-hover">
-                                        <a class="nav-link active nav-hover" aria-current="page"
-                                            href="/invisalign">Invisalign</a>
-                                    </li>
-                                    <li class="nav-item nav-hover">
-                                        <a class="nav-link active nav-hover" aria-current="page"
-                                            href="/implants">Implants</a>
-                                    <li class="nav-item nav-hover">
-                                        <a class="nav-link active nav-hover" aria-current="page" href="/blog">Blog</a>
-                                    </li>
-                                    <li class="nav-item nav-hover">
-                                        <a class="nav-link nav-hover" href="#contact-us" tabindex="-1"
-                                            aria-disabled="true">Contact
-                                            Us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <form class="container-fluid justify-content-start">
-                                            <button type="button" class=" btn btn-outline-light fd-btn"
-                                                data-bs-toggle="modal" data-bs-target="#appointmentModal">
-                                                Book Appointment
-                                            </button>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </header>
-                <button class="btn btn-light back-to-top-btn hide" data-scroll="up" type="button">
-                    <a href="#header"><i class="fas fa-arrow-up fa-2x back-to-top"></i></a>
+                    <h1 class="brand-name">
+                        <bold>Family</bold> Dental
+                    </h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <main>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link active nav-hover" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown link-hover nav-hover" id="myDropdown">
+                            <a class="nav-link dropdown-toggle nav-hover" href="#" data-bs-toggle="dropdown">About
+                                Us</a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item nav-hover" href="/ourClinic">Our Clinic</a>
+                                </li>
+                                <li> <a class="dropdown-item nav-hover" href="/ourDoctors">Our Team
+                                        &raquo; </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item nav-hover" href="/ourDoctors#tushita">Dr.
+                                                Tushita</a></li>
+                                        <li><a class="dropdown-item nav-hover" href="/OurDoctors#mahima">Dr.
+                                                Mahima</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link active nav-hover" aria-current="page" href="/invisalign">Invisalign</a>
+                        </li>
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link active nav-hover" aria-current="page" href="/implants">Implants</a>
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link active nav-hover" aria-current="page" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link nav-hover" href="#contact-us" tabindex="-1" aria-disabled="true">Contact
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="container-fluid justify-content-start">
+                                <button type="button" class=" btn btn-outline-light fd-btn" data-bs-toggle="modal"
+                                    data-bs-target="#appointmentModal">
+                                    Book Appointment
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <button class="btn btn-light back-to-top-btn hide" data-scroll="up" type="button">
+        <a href="#header"><i class="fas fa-arrow-up fa-2x back-to-top"></i></a>
+    </button>
+    <main>

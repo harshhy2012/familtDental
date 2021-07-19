@@ -18,7 +18,6 @@ app.use(express.static("public"));
 //------------------- bcrypt passwords ------------------------//
 
 let admin = { mahima: "", tushita: "" };
-
 const pws = process.env.pw.split(",");
 
 bcrypt.hash(pws[0], parseInt(process.env.SALT_ROUNDS), function (err, hash) {
@@ -95,7 +94,7 @@ app.post("/addBlog", function (req, res) {
 // });
 
 //------------------------ ---- ------------------------------//
-let success = false;
+let success = '';
 app.get("/", function (req, res) {
   res.render("home", { success });
 });
@@ -103,17 +102,18 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   console.log("chal gya");
   const user = new User({
-    title: req.body.your_name,
-    content: req.body.phone,
-    email: req.body.email,
-    message: req.body.message,
+    name: req.body.userName,
+    phone: req.body.phoneNumber,
+    email: req.body.emailID,
+    message: req.body.message
   });
 
   user.save(function (err) {
     if (!err) {
-      success = true;
+      success = "success";
       res.redirect("/");
     } else {
+      success='error';
       console.log(err);
       res.redirect("/");
     }
