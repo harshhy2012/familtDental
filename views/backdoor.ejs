@@ -1,36 +1,30 @@
 <%- include("backdoorHeader"); -%>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Family Dental Admin</h3>
 
-				<div class="tabbable-panel">
-					<div class="tabbable-line">
-						<ul class="nav nav-tabs">
-							<li class="active">
-								<a href="/formDashboard" data-toggle="tab">
-									Dashboard </a>
-							</li>
-							<li>
-								<a href="/addBlog" data-toggle="tab">
-									Add a blog</a>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab_default_1">
-								<%- include("formDashboard");-%> 
-							</div>
-							<div class="tab-pane" id="tab_default_2">
-								<%- include("addBlog"); -%>
+<table id="basic-data-table" class="table nowrap" style="width:100%">
+	<thead>
+	  <tr>
+		<th>Name</th>
+		<th>Phone Number</th>
+		<th>Email</th>
+		<th>Message</th>
+		<th>date submitted</th>
+		<th>replied</th>
+	  </tr>
+	</thead>
+	
+	<tbody>
+		
+	  <tr>
+		<td>Tiger</td>
+		<td>Nixon</td>
+		<td>System Architect</td>
+		<td>Edinburgh</td>
+		<td>61</td>
+		<td>2011/04/25</td>
+	  </tr>
 
-							</div>
-							
-						</div>
-					</div>
-				</div>
+	</tbody>
+  </table>
 
-			</div>
-		</div>
-	</div>
 
-	<%- include("backdoorFooter"); -%>
+<%- include("backdoorFooter"); -%>

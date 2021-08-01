@@ -1,4 +1,7 @@
-
+:root{
+  --cl-primary-200: #b18abf;
+  --cl-primart-400: #b18abf;
+}
 html {
   overflow-x: hidden;
 }
@@ -7,6 +10,7 @@ body {
   font-family: "Montserrat";
   text-align: center;
   line-height: 1.5;
+  margin: 0;
 }
 
 h1,
@@ -17,6 +21,9 @@ h5,
 h6 {
   font-family: "Raleway";
 }
+
+
+
 
 /******************************** Modal form ************************************/
 .modal-dialog {
@@ -221,7 +228,7 @@ i {
 }
 
 .horizontal-rule {
-  border: dotted #d59fe9 6px;
+  border: dotted #b18abf 6px;
   border-bottom: none;
   padding: 0;
   margin: 0;
