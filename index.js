@@ -150,8 +150,22 @@ app.get("/admin", function (req, res) {
   res.render("admin");
 });
 
+const checkToken = (req, res, next) => {
+  const header = req.headers['authorization'];
+
+  if(typeof header !== 'undefined') {
+      const bearer = header.split(' ');
+      const token = bearer[1];
+      req.token = token;
+      next();
+  } else {
+      //If header is undefined return Forbidden (403)
+      res.sendStatus(403)
+  }
+}
+
 app.post("/admin", function (req, res) {
-  const username = req.body.user_name;
+  const username = req.body.user_name.trim();
   if (admin.hasOwnProperty(username)) {
     bcrypt.compare(req.body.pass, admin[username], function (err, result) {
       // console.log({username, result});
@@ -162,13 +176,13 @@ app.post("/admin", function (req, res) {
           },
           process.env.JWT_KEY,
           {
-            expiresIn: "2h",
+            expiresIn: "24h",
           }
         );
         console.log(token);
         res.redirect("admin/backdoor");
       } else {
-        console.log("wrong password");
+        console.log("wrong username or password");
         res.redirect("/admin");
       }
     });
@@ -178,8 +192,25 @@ app.post("/admin", function (req, res) {
   }
 });
 
-app.get("/admin/backdoor", function (req, res) {
-  res.render("backdoor");
+
+app.get("/admin/backdoor", checkToken, (req,res) => {
+  jwt.verify(req.token, process.env.JWT_KEY, (err, authorizedData) => {
+    if(err){
+      console.log(err);
+        //If error send Forbidden (403)
+        console.log('ERROR: Could not connect to the protected route');
+        res.sendStatus(403);
+    } else {
+        //If token is successfully verified, we can send the autorized data 
+        res.json({
+            message: 'Successful log in',
+            authorizedData
+        });
+        console.log('SUCCESS: Connected to protected route');
+        res.render("backdoor");
+    }
+  });
+  
 });
 
 app.post("/admin/backdoor", function (req, res) {});
@@ -196,7 +227,16 @@ app.get("/admin/addAlbum", function (req, res) {
 
 app.post("/admin/addAlbum", function (req, res) {});
 
+app.get("/admin/logout", function(req,res){
+  token = '';
+  console.log(token);
+  res.redirect('/admin');
+});
+
 console.log(token);
+
+
+
 
 app.listen(3000, function () {
   console.log("Server is running at port 3000.");

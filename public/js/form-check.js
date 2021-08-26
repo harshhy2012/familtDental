@@ -1,4 +1,4 @@
-const form = document.getElementById('appointmentForm');
+const form = document.getElementById('appointmentID');
 const username = document.getElementById('your_name');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
@@ -57,7 +57,4 @@ function checkInputs(){
     function isPhoneNumber(phone){
         return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(phone);
     }
-
-
-    
 }
