@@ -44,24 +44,29 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action="/admin" method="post">
+  <form>
     <img class="mb-4" src="images/logo-02.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" name="user_name" placeholder="name@example.com">
       <label for="floatingInput">username</label>
+      <div class="username error"></div> 
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" name="pass" placeholder="Password">
       <label for="floatingPassword">Password</label>
+      <div class="password error"></div> 
     </div>
     <button class="w-100 btn btn-lg btn-primary btn-fd" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; Family Dental 2019–2021</p>
   </form>
+
+  
 </main>
 
 
-    
+  
+<script src="js/admin-form-check.js"></script>
   </body>
 </html>

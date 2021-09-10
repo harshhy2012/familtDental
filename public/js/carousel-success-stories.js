@@ -20,4 +20,4 @@ $('.success-carousel').owlCarousel({
             loop:false
         }
     }
-})
+});
