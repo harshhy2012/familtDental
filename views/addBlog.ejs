@@ -1,15 +1,76 @@
 <%- include("backdoorHeader"); -%>
-<h1>Compose</h1>
-    <form class="" action="/addBlog" method="post">
-      <div class="form-group">
-        <label>Title</label>
-        <input class="form-control" type="text" name="postTitle">
-        <label>Topic</label>
-        <input class="form-control" type="text" name="postTopic">
-        <label>Post</label>
-        <textarea id="summernote" name="postBody" rows="5" cols="30"></textarea>
-      </div>
+  <h1>Compose</h1>
+  <form id="blogForm">
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" id="blogTitle" type="text" name="postTitle">
+      <label>Topic</label>
+      <input class="form-control" id="blogTopic" type="text" name="postTopic">
+      <label>Post</label>
+      <textarea id="editor" name="postBody"></textarea>
+      <script>
+        tinymce.init({
+          selector: 'textarea#editor',
+          skin: 'bootstrap',
+          plugins: 'lists, link, image  ',
+          toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+          menubar: false,
+          setup: (editor) => {
+            // Apply the focus effect
+            editor.on("init", () => {
+              editor.getContainer().style.transition =
+                "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
+            });
+            editor.on("focus", () => {
+              (editor.getContainer().style.boxShadow =
+                "0 0 0 .2rem rgba(0, 123, 255, .25)"),
+                (editor.getContainer().style.borderColor = "#80bdff");
+            });
+            editor.on("blur", () => {
+              (editor.getContainer().style.boxShadow = ""),
+                (editor.getContainer().style.borderColor = "");
+            });
+          },
+        });
+      </script>
+    </div>
     <button class="btn btn-primary" type="submit" name="button">Publish</button>
-</form>
+  </form>
 
-<%- include("backdoorFooter"); -%>
+
+  <script>
+    const form = document.querySelector('#blogForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+
+      const title = form.postTitle.value;
+      const topic = form.postTopic.value;
+      const content = form.postBody.value;
+
+      console.log(title, topic, content);
+
+      try {
+        const res = await fetch('/admin/addBlog', {
+          method: 'POST',
+          body: JSON.stringify({ title, topic, content }),
+          headers: { 'Content-Type': 'application/json' }
+        });
+        const data = await res.json();
+        console.log(data);
+
+
+
+        if (data.errors) {
+          console.log(data.errors);
+        }
+      }
+      catch (err) {
+        //give failure modal!
+        console.log(err);
+      }
+    });
+
+  </script>
+
+  <%- include("backdoorFooter"); -%>

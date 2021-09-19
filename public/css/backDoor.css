@@ -1,3 +1,5 @@
+.note-editor .dropdown-toggle::after { all: unset; }
+
 * {
   margin: 0;
   padding: 0;

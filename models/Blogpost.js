@@ -3,21 +3,19 @@ const mongoose = require("mongoose");
 const blogpostSchema = new mongoose.Schema({
     title: String,
     topic: String,
-    originDate: { type: Date, default: Date.now },
     content: String,
+    originDate: { type: Date, default: Date.now },
+    
   });
 
-  // const blogpost = new Blogpost({
-  //   title: req.body.postTitle,
-  //   topic: req.body.postTopic,
-  //   content: req.body.postBody,
-  // });
-  // blogpost.save(function (err) {
-  //   if (!err) {
-  //     res.redirect("/");
-  //   }
-  // });
-
+   blogpostSchema.pre('save', async function(doc, next){
+    //     // send data to api to send mail to doctors.
+    });
+    
+    
+     blogpostSchema.post('save', async function(doc, next){
+        console.log("The user has been added to database", doc);
+    });
 
 const Blogpost = mongoose.model("blogpost", blogpostSchema);
 

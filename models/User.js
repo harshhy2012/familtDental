@@ -1,23 +1,24 @@
+/* jshint esversion: 8 */
 const mongoose = require("mongoose");
 const {isEmail, isMobilePhone } = require("validator");
 
 const userSchema = new mongoose.Schema({
     name: {type: String,
-           required: [true, ''],
+           required: [true, 'Please enter a name!'],
            },
     phone: {
             type: String,
             required: [true, 'Please enter a phone number!'],
-            validator: [isMobilePhone, 'Non-existent phone number']
+            validate: [isMobilePhone, 'Incorrect phone number!']
     },
     email: {
             type: String,
             required: [true, 'Please enter an email'],
-            unique: true,
             lowercase: true,
-            validate: [isEmail, 'Please enter a valid email']
+            validate: [isEmail, 'Incorrect email!']
     },
     message: String,
+    replied: { type:Boolean, default: false}
 });
 
 userSchema.pre('save', async function(doc, next){

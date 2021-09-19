@@ -13,16 +13,20 @@
 	</thead>
 	
 	<tbody>
-		
-	  <tr>
-		<td>Tiger</td>
-		<td>Nixon</td>
-		<td>System Architect</td>
-		<td>Edinburgh</td>
-		<td>61</td>
-		<td>2011/04/25</td>
+		<% if(users.length > 0) {%> 
+			<% users.forEach(user => { %>
+	  			<tr>
+					<td><%= user.name %></td>
+					<td><%= user.phone %></td>
+					<td><%= user.email %></td>
+					<td><%= user.message %></td>
+					<td><%= user.message %></td>
+					<td><%= user.createdAt %></td>
 	  </tr>
-
+	  <% }); %>
+    <% } else { %>
+		<p>There are no users to display...</p>
+    <% } %>
 	</tbody>
   </table>
 

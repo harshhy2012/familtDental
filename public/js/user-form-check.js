@@ -1,11 +1,11 @@
-const form = document.querySelector('#appointmentID');
+/* jshint esversion: 8 */
+const form = document.querySelector('#formID');
 const nameError = document.querySelector('#your_name');
 const emailError = document.querySelector('#email');
 const phoneError = document.querySelector('#phone');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
 
     setSuccessFor(nameError);
     setSuccessFor(emailError);
@@ -20,8 +20,10 @@ form.addEventListener('submit', async (e) => {
     const phone = form.phoneNumber.value;
     const message = form.message.value;
 
+    console.log(name, email, phone, message);
+
     try{
-        const res = await fetch('/login',{
+        const res = await fetch('/',{
             method: 'POST',
             body: JSON.stringify({name, email, phone, message}),
             headers: {'Content-Type': 'application/json'}
@@ -38,10 +40,11 @@ form.addEventListener('submit', async (e) => {
             setErrorFor(phoneError, data.errors.phone);
         }
         if(data.user){
-            location.assign('/admin');
+            //give success modal!
         }
     }
     catch (err){
+        //give failure modal!
         console.log(err);
     }
 });
