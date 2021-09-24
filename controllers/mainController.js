@@ -85,3 +85,15 @@ module.exports.blog_get = async (req, res) => {
         console.log("\nerror here: \n",err);
       }
 };
+
+module.exports.blogPost_get = async (req,res) => {
+    const reqBlog = req.params.blog_id;
+    try{
+        const result = await Blog.findOne({_id: reqBlog});
+        res.render("blogPost", {blog: result});
+        console.log(result);
+    }
+    catch(err){
+        console.log(err);
+    }
+};

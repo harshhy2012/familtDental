@@ -30,7 +30,7 @@ module.exports.addBlog_get = (req,res) => {
 };
 module.exports.addBlog_post = async (req,res) => {
   const {title, topic, content} = req.body;
-  console.log(content);
+  console.log("blog content: ", content);
   try{
     const blog = await Blog.create({title, topic, content});
     res.status(201).json({id: blog._id, title: blog.title, topic: blog.topic, body: blog.content});

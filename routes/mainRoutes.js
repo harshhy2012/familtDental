@@ -19,5 +19,7 @@ router.get("/treatments", mainController.treatments_get);
 
 router.get("/blog", mainController.blog_get);
 
+router.get("/blog/:blog_id", mainController.blogPost_get);
+
 module.exports = router;
 
