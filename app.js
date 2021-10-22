@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const mainRoutes = require("./routes/mainRoutes");
 const { requireAuth } = require("./middleware/authMiddleware");
+const stopCache = require("./middleware/stopCacheMiddleware");
 
 const app = express();
 
@@ -28,5 +29,5 @@ mongoose.connect(dbURI,
 
 app.use(mainRoutes);
 app.use(adminRoutes);
-app.use('/admin', requireAuth ,authRoutes);
+app.use('/admin', requireAuth , stopCache, authRoutes);
 
