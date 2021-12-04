@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
-
     <!--icon-->
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
     <title>Family Dental</title>
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -38,7 +36,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,19 +46,19 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="form">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title form-title">Book an Appointment Now!</h5>
-                    <button type="button" class="btn btn-shift" data-bs-dismiss="modal" aria-label="Close"><i
+                <div class="modal-header px-3 pt-3">
+                    <h5 class="modal-title px-5">Book an Appointment Now!</h5>
+                    <button type="button" id="closeMain" class="btn btn-shift" data-bs-dismiss="modal" aria-label="Close"><i
                             class="far fa-times-circle fa-2x btn-shift"></i></button>
                 </div>
-                <div class="modal-body">
-                    <div class="form-section">
+                <div class="modal-body justify-content-center">
+                    <div class="form-section p-5">
                         <form class="form" id="formID">
                             <div class="form-floating">
 
                                 <input type="text" placeholder="Your Name" name="userName" class="form-control"
                                     id="your_name">
-                                <label for="floatingInput"><i class="fas fa-user modal-icon"></i> Name</label>
+                                <label for="floatingInput"><i class="fas fa-user"></i> Name</label>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small>Error Message</small>
@@ -68,7 +66,7 @@
                             <div class="form-floating ">
                                 <input type="text" placeholder="0123456789" name="phoneNumber" class="form-control"
                                     id="phone">
-                                <label for="phone"><i class="fas fa-phone-alt modal-icon"></i> Phone
+                                <label for="phone"><i class="fas fa-phone-alt"></i> Phone
                                     Number</label>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -77,7 +75,7 @@
                             <div class="form-floating">
                                 <input type="text" placeholder="abc@def.com" name="emailID" class="form-control"
                                     id="email">
-                                <label for="email"><i class="fas fa-envelope modal-icon"></i> Email
+                                <label for="email"><i class="fas fa-envelope"></i> Email
                                     address</label>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -91,36 +89,40 @@
                         </form>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary submit-btn" id="submit-modal" 
+                <div class="modal-footer pe-5">
+                    <button type="submit" class="btn btn-primary submit-btn  me-4" id="submit-modal" 
                         form="formID">Submit</button>
-                    <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Success Message -->
-    <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
+    <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="successModalToggle"
         tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
             <div class="modal-content success-modal">
-                <div class="modal-header" id="inputFormModa">
+                <div class="modal-header" id="SuccessModalHeading">
+                   <button id = "successButtonClose" class="hide" data-bs-target="#successModal" data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="successModalToggle"><i class="far fa-check-circle"></i> Thank you,
                         your
                         response has been recorded, we will contact you shortly!</h2>
                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    
                 </div>
             </div>
         </div>
     </div>
 
     <!-- failure Message -->
-    <div class="modal fade" id="FormFillModalToggle" aria-hidden="true" aria-labelledby="successModalToggle"
+    <div class="modal fade" id="failureModal" aria-hidden="true" aria-labelledby="successModalToggle"
         tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
             <div class="modal-content success-modal">
                 <div class="modal-header">
+                    <button id = "failureButtonClose" class="hide" data-bs-target="#failureModal" data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="successModalToggle"><i class="far fa-times-circle fa-2x"></i>
                         Something
                         Went Wrong! Please try again Later</h2>
@@ -130,24 +132,35 @@
             </div>
         </div>
     </div>
+ 
+    <button id = "successButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#successModal" data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
+    <button id = "failureButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#failureModal" data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
+    
+   
 
     <header id="header">
 
         <section class="container-fluid info-bar">
-            <div class="row">
-                <div class="col-md-6 time">
-                    <i class="fas fa-clock head-icon"></i>
-                    Mon-Sun 9:00AM-9:00PM, <span>Emergency 24/7</span>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-4  time text-lg-start text-center">
+                    <p>
+                        <i class="fas fa-clock head-icon"></i>
+                        Mon-Sun 9:00AM-9:00PM, <span>Emergency 24/7</span>
+                    </p>
                 </div>
-                <div class="col-lg-3 mail">
-                    <a href="mailto:contactus@familydentaldwarka.in">
-                        <i class="fas fa-envelope head-icon"></i>
-                        contactus@familydentaldwarka.in
-                    </a>
+                <div class="col-12 col-lg-4 text-center">
+                    <p>
+                        <a href="mailto:contactus@familydentaldwarka.in">
+                            <i class="fas fa-envelope head-icon"></i> contactus@familydentaldwarka.in
+                        </a>
+                    </p>
+                    
                 </div>
-                <div class="col-lg-3 phone">
+                <div class="col-12 col-lg-4 phone text-lg-end text-center">
+                   <p>
                     <i class="fas fa-phone head-icon"></i>
-                    +91 88511 95050, +91 95824 74046</>
+                    +91 88511 95050, +91 95824 74046
+                   </p>
                 </div>
             </div>
 
@@ -155,11 +168,11 @@
 
         <hr class="info-bar horizontal-rule">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-pad">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
             <div class="container-fluid">
                 <a href="/" class="navbar-brand">
 
-                    <img style="margin: 10px;" src="images/logo-02.png" alt="family dental logo" height="70" width="70"
+                    <img style="margin: 10px;" src="/images/logo-02.png" alt="family dental logo" height="70" width="70"
                         class="d-inline-block">
 
                     <h1 class="brand-name">
@@ -177,7 +190,7 @@
                             <a class="nav-link active nav-hover" aria-current="page" href="/">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown link-hover nav-hover" id="myDropdown">
+                        <li class="nav-item dropdown nav-hover" id="myDropdown">
                             <a class="nav-link dropdown-toggle nav-hover" href="#" data-bs-toggle="dropdown">About
                                 Us</a>
                             <ul class="dropdown-menu">

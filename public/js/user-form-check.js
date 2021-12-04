@@ -41,11 +41,30 @@ form.addEventListener('submit', async (e) => {
         }
         if(data.user){
             //give success modal!
+            
+            $("#closeMain").trigger("click", () => {
+            });
+            
+            setTimeout(() => {
+                $("#successButton").trigger("click");
+                setTimeout(() => {
+                    $("#successButtonClose").trigger("click");
+                },5000);
+            },1000);
+
         }
     }
     catch (err){
         //give failure modal!
-        console.log(err);
+        $("#closeMain").trigger("click", () => {
+        });
+        
+        setTimeout(() => {
+            $("#successButton").trigger("click");
+            setTimeout(() => {
+                $("#successButtonClose").trigger("click");
+            },5000);
+        },1000);
     }
 });
 

@@ -1,4 +1,4 @@
-<%- include("header"); -%>
+<%- include("./partials/header"); -%>
 
   <div id="myCarousel" class="carousel slide carousel-bg" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -58,8 +58,8 @@
   <!-- six columns of text below the carousel -->
 
 
-  <div class="card-group">
-    <div class="card card-color_1">
+  <div class="card-group row justify-content-center my-4">
+    <div class="card card-color_1 col-12 col-lg-4 ">
       <img src="images/whiten.png" class="mx-auto card-icon" alt="..." width="160" height="160"
         aria-label="whittening icon">
       <div class="card-body">
@@ -71,7 +71,7 @@
         <button class="btn btn-secondary" href="#" type="button">View details &raquo;</button>
       </div>
     </div>
-    <div class="card card-color_2">
+    <div class="card card-color_2 col-12 col-lg-4 ">
       <img src="images/implant.png" class="mx-auto card-icon" alt="..." width="160" height="160"
         aria-label="implant icon">
       <div class="card-body" style="border-radius: 5px;">
@@ -82,7 +82,7 @@
         <button class="btn btn-secondary" href="#" type="button">View details &raquo;</button>
       </div>
     </div>
-    <div class="card card-color_3">
+    <div class="card card-color_3 col-12 col-lg-4 ">
       <img src="images/braces.png" class="mx-auto card-icon " alt="..." width="160" height="160"
         aria-label="braces picture">
       <div class="card-body">
@@ -94,7 +94,7 @@
         <button class="btn btn-secondary" href="#" type="button">View details &raquo;</button>
       </div>
     </div>
-    <div class="card card-color_4">
+    <div class="card card-color_4 col-12 col-lg-4 ">
       <img src="images\caries.png" class="mx-auto card-icon" alt="..." width="160" height="160">
       <div class="card-body">
         <h5 class="card-title">Caries</h5>
@@ -105,7 +105,7 @@
         <button class="btn btn-secondary" href="#" type="button">View details &raquo;</button>
       </div>
     </div>
-    <div class="card card-color_5">
+    <div class="card card-color_5 col-12 col-lg-4">
       <img src="images/rct-icon.png" class="mx-auto card-icon" alt="..." width="170" height="170" style="padding: 10px;">
       <div class="card-body">
         <h5 class="card-title">Root Canal</h5>
@@ -116,7 +116,7 @@
         <button class="btn btn-secondary" href="/treatments" type="button">View details &raquo;</button>
       </div>
     </div>
-    <div class="card card-color_6">
+    <div class="card card-color_6 col-12 col-lg-4">
       <img src="images/pedodentistry.png" class="mx-auto card-icon" alt="..." width="170" height="170" style="padding: 10px;">
       <div class="card-body">
         <h5 class="card-title">Pedodontics</h5>
@@ -133,21 +133,18 @@
 
 
   <!-- call to action -->
-  <div class="row justify-content-center call-for-action">
-    <div class="col-md-7 appoint-text-col">
+  <div class="row justify-content-center align-items-center my-3 py-3">
+    <div class="col-lg-4 text-center text-lg-start">
       <h2 class="col-title">MAKE AN APPOINTMENT NOW</h2>
       <p>
         All staff members of Dental Clinic are licensed professionals. Our staff consists of licensed general dentists.
       </p>
     </div>
-    <div class="col-md-3 appoint-btn-col position-relative">
-      <div class="position-absolute top-50 end-0 translate-middle-y">
-        <button type="button" class=" btn btn-outline-light call-for-action-btn" data-bs-toggle="modal"
+    <div class="col-lg-4 text-center text-lg-end">
+        <button type="button" class=" btn btn-outline-light call-for-action-btn text-center" data-bs-toggle="modal"
           data-bs-target="#appointmentModal">
           + Book Appointment
         </button>
-      </div>
-
     </div>
   </div>
 
@@ -155,11 +152,11 @@
 
   <!-- Review Carousel -->
 
- <%- include("reviewCarousel"); -%>
+ <%- include("./partials/reviewCarousel"); -%>
 
   <!-- Testimonials -->
 
-  <%- include("testCarousel"); -%>
+  <%- include("./partials/testCarousel"); -%>
 
   <!-- START THE FEATURETTES -->
 
@@ -167,4 +164,4 @@
 
   <!-- FOOTER -->
 
-  <%- include("footer"); -%>
+  <%- include("./partials/footer"); -%>

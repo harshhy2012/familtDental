@@ -14,7 +14,7 @@ module.exports.adminLandingPage_get = async (req,res) => {
   try{
     const users = await User.find();
     console.log(users);
-    res.render('backdoor', {users: users});
+    res.render('./backdoor/backdoor', {users: users});
   }
   catch(err){
     console.log("db error: \n", err);
@@ -26,7 +26,7 @@ module.exports.adminLandingPage_post = (req,res) => {
 };
 
 module.exports.addBlog_get = (req,res) => {
-    res.render("addBlog");
+    res.render("./backdoor/addBlog");
 };
 module.exports.addBlog_post = async (req,res) => {
   const {title, topic, content} = req.body;
@@ -42,7 +42,7 @@ module.exports.addBlog_post = async (req,res) => {
 };
 
 module.exports.addAlbum_get = (req,res) => {
-    res.render('addAlbum');
+    res.render('./backdoor/addAlbum');
 };
 
 module.exports.addAlbum_post = (req,res) => {

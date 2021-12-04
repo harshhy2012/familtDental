@@ -4,6 +4,6 @@ const stopCache = (req,res,next) => {
     res.setHeader("Pragma", "no-cache"); // HTTP 1.0.
     res.setHeader("Expires", "0"); // Proxies.  
     next();
-}
+};
 
 module.exports = stopCache;

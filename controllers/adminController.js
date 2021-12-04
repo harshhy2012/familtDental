@@ -41,13 +41,13 @@ const createToken = (username) => {
 module.exports.admin_get = (req, res) => {
   const token = req.cookies.jwt;
   if(!token)
-    res.render("admin");
+    res.render("./backdoor/admin");
   //check if jwt token exists and it is verifd
   else {
     jwt.verify(token, process.env.JWT_KEY, (err) => {
       if (err) {
         console.log(err);
-        res.render('admin');
+        res.render('./backdoor/admin');
       } else {
         res.redirect('/admin/backdoor');
       }
