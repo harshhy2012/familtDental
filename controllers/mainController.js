@@ -80,7 +80,7 @@ module.exports.treatments_get = (req, res) => {
 module.exports.blog_get = async (req, res) => {
     try{const result = await Blog.find();
         console.log(result);
-        res.render("./main/Blog", {blogs: result});
+        res.render("./main/blog", {blogs: result});
       }
       catch (err) {
         console.log("\nerror here: \n",err);
