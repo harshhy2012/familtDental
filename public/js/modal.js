@@ -10,5 +10,5 @@ $('#FormFillModalToggle').on('show.bs.modal', function(){
     clearTimeout(myModal.data('hideInterval'));
     myModal.data('hideInterval', setTimeout(function(){
         myModal.modal('hide');
-    }, 4000));
+    }, 100000));
   });

@@ -134,7 +134,7 @@ textarea {
 
 .modal-title {
   border: 0;
-  font-size: 2.2em;
+  font-size: 2.2rem;
   text-transform: uppercase;
   color: #fac20b;
 }
@@ -173,9 +173,7 @@ textarea {
 
 .info-bar {
   box-sizing: border-box;
-  padding: 10px 10px;
-  padding-left: 6.1%;
-  padding-right: 6.1%;
+  padding: 0.5% 5% 0.5% 5%;
   font-size: 1em;
   color: rgb(94, 91, 91);;
 }
@@ -186,14 +184,20 @@ p span {
 p > i {
   color: #b18abf;
 }
-p a {
-  color: rgb(94, 91, 91);
+
+div a, p a {
+  color: rgb(107, 101, 101);
+  text-decoration: none;
+  font-weight: 500;
+}
+div a:hover, p a:hover {
+  color: rgb(71, 68, 68);
   text-decoration: none;
   font-weight: 500;
 }
 .phone {
   color: #faba0b;
-
+  text-decoration: none;
   font-weight: 600;
 }
 .horizontal-rule {
@@ -204,6 +208,7 @@ p a {
 }
 
 /*|||||||||||||||||||||||| fixed nav bar ||||||||||||||||||||||||||*/
+.navbar
 .navbar-brand {
   margin: 0;
   padding: 0;
@@ -223,15 +228,10 @@ p a {
   font-weight: bolder;
 }
 
-.nav-link active {
+active {
   color: #faba0b;
 }
 
-.nav-custom {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 1.1em;
-}
 .nav-item {
   padding-left: 5px;
   padding-right: 5px;
@@ -242,8 +242,8 @@ p a {
   color: #c78ddb;
 }
 .nav-hover:hover {
-  color: #ffd902;
-  background-color: #838383;
+  color: #ffd902 !important;
+  background-color: #b1b1b1;
   border-radius: 4px;
 }
 .btn-outline-success {
@@ -370,21 +370,9 @@ p a {
   background-size: cover;
 }
 
-/*|||||||||||||||||||||||| floating appointment btn ||||||||||||||||||||||||||*/
-.floating-card {
-  border-radius: 0;
-  text-align: center;
-  position: absolute;
-  right: 10%;
-  bottom: -10%;
-  box-shadow: 0 50px 100px 20px rgba(0, 0, 0, 0.651);
-}
-
-.first-col {
-  box-shadow: -10px 0 100px 20px;
-}
-
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
+
+
 
 .card {
   color: rgb(230, 230, 230);
@@ -395,13 +383,12 @@ p a {
 }
 .card:hover {
   color: #fff;
-  transform: translateY(-6%);
+  transform: translateY(-4.9%);
   z-index: 4;
 }
 .card-icon {
   filter: brightness(0) invert(1);
-
-  padding: 30px;
+  padding: 9%;
 }
 .card-title {
   text-transform: uppercase;
@@ -447,15 +434,14 @@ p a {
   border-color: #b18abf;
 }
 
+
+
 /*|||||||||||||||||||||||| reviews styles ||||||||||||||||||||||||||*/
 
 .review-row {
   color: white;
   background-color: #b18abf;
-  margin: 50px auto 50px auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding-top: 40px;
 }
 
@@ -496,7 +482,6 @@ p a {
 
 .review-text {
   color: #b18abf;
-  width: 70%;
   text-align: justify;
   padding: 2% 5% 1% 2%;
 }
@@ -595,15 +580,32 @@ p a {
   bottom: 19%;
 }
 .back-to-top-btn {
+  display: inline-block;
+  background-color: rgb(221, 159, 241, 0.85);
+  width: 50px;
+  height: 50px;
+  text-align: center;
   position: fixed;
   height: 200px;
   width: 200px;
-  right: -100px;
-  bottom: -100px;
-  background-color: rgb(221, 159, 241, 0.85);
+  right: -10%;
+  bottom: -10%;
+  
   border-radius: 50%;
   z-index: 10;
 }
+
+@media screen and (min-width: 1000px) {
+  .back-to-top-btn {
+
+    right: -5%;
+    bottom: -10%;
+  }
+}
+
+
+
+
 .back-to-top-btn:hover {
   background-color: rgb(221, 159, 241);
   color: rgba(255, 255, 225);
@@ -641,7 +643,9 @@ p a {
 
 /*|||||||||||||||||||||||| top bar styles ||||||||||||||||||||||||||*/
 
-
+.erw{
+  color: #fac20b;
+}
 
 .appoint-text-col {
   text-align: left;
@@ -660,21 +664,24 @@ p a {
 }
 
 /*|||||||||||||||||||||||| footer styles ||||||||||||||||||||||||||*/
-iframe{
+div > iframe{
+  box-sizing: border-box;
   height: 250px;
-  width: 350px;
+  width: 250px;
 }
 @media screen and (min-width: 620px) {
   iframe{
+    box-sizing: border-box;
     height: 300px;
-    width: 400px;
+    width: fit-content;
   }
 }
 
 @media screen and (min-width: 960px) {
   iframe{
-    height: 350px;
-    width: 450px;
+    box-sizing: border-box;
+    height: 325px;
+    width: fit-content;
   }
 }
 
@@ -683,29 +690,31 @@ iframe{
   align-items: center;
 }
 
-.map-col {
-  padding-left: 40px;
-  padding-right: 40px;
-  width: fit-content;
-}
 .col-title {
   text-transform: uppercase;
-  padding-top: 2%;
-  padding-bottom: 2%;
 }
+
+.map-col {
+  padding: auto 2% auto 2%;
+
+  width: fit-content;
+}
+
 .contact-col {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 5% 2% 5% 2%;
   color: #f1f1f1;
-  width: max-content;
+  /* width: max-content; */
   background-color: #b18abf;
   line-height: 2;
 }
-.contact-container {
-  position: relative;
-  top: 17%;
-  text-align: left;
+
+.addr-col {
+  padding: 6.7% 2% 5% 2%;
+  color: rgb(94, 91, 91);
+  width: max-content;
+  line-height: 2;
 }
+
 .footer-time {
   color: #f1f1f1;
   font-weight: 500;
@@ -724,6 +733,10 @@ iframe{
   text-decoration: none;
   color: white;
 }
+.contact-list > li > a:hover {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
 
 .socials-list {
   padding: 0;
@@ -733,26 +746,8 @@ iframe{
   display: inline-block;
 }
 
-.social {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.addr-col {
-  padding-left: 40px;
-  padding-right: 40px;
-  color: rgb(94, 91, 91);
-  width: max-content;
-  line-height: 2;
-}
-.addr-container {
-  position: relative;
-  top: 28%;
-  text-align: left;
-}
-
 .foot {
-  padding: 10px auto 10px auto;
+  padding: 1% auto 1% auto;
   background-color: rgb(211, 211, 211);
   color: rgb(94, 91, 91);
 }
@@ -867,11 +862,11 @@ a{
   vertical-align: center;
 }
 .clinic-photo img {
-  width: 100%;
+  margin: auto auto;
+  width: 90%;
   /* padding: 100px 50px 100px 50px; */
 }
 .clinic-text {
-  padding-top: 90px;
   text-align: justify;
 }
 .album-container {
@@ -963,10 +958,10 @@ a{
 /******************************Implants styles***********************************/
 
 .implant-section{
-  margin: 4% auto 4% auto;
-  padding: 10px 15px 10px 15px;
+  margin: 3% auto 3% auto;
+  padding: 1% 1.5% 1% 1.5%;
   border: #f2f2f2 solid 1px;
-  box-shadow: 0px 0px 10px 10px #f2f2f2;
+  box-shadow: 0px 0px 1% 10px #f2f2f2;
 }
 
 /*/////////////////////////////hero///////////////////////////////////////*/
