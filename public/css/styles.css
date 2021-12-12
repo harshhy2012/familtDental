@@ -207,6 +207,15 @@ div a:hover, p a:hover {
   margin: 0;
 }
 
+@media screen and (min-width: 240px) {
+  .timings, .emails, .phones{
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
 /*|||||||||||||||||||||||| fixed nav bar ||||||||||||||||||||||||||*/
 .navbar
 .navbar-brand {
@@ -217,13 +226,12 @@ div a:hover, p a:hover {
   align-items: center;
   vertical-align: middle;
 }
-.brand-name {
-  height: fit-content;
-  font-size: 1.5em;
+.brand-name, .footer-brand-name {
+  font-size: 2rem;
   font-weight: normal;
   color: black;
 }
-.brand-name bold {
+.brand-name bold, .footer-brand-name bold{
   color: #b18abf;
   font-weight: bolder;
 }
@@ -233,10 +241,10 @@ active {
 }
 
 .nav-item {
+  font-size: 0.9rem;
   padding-left: 5px;
   padding-right: 5px;
 }
-
 
 .head-icon:hover {
   color: #c78ddb;
@@ -285,41 +293,25 @@ active {
 /* ============ desktop view .end// ============ */
 
 /* ============ small devices ============ */
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .dropdown-menu .dropdown-menu {
     margin-left: 0.7rem;
     margin-right: 0.7rem;
     margin-bottom: 0.5rem;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .dropdown-menu .dropdown-menu {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* ============ small devices .end// ============ */
 
 /*|||||||||||||||||||||||| maps ||||||||||||||||||||||||||*/
-
-#map {
-  width: 100%;
-  height: 400px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  text-align: center;
-  align-items: center;
-  left: 50%;
-  right: 50%;
-  height: 350px;
-  width: 450px;
-}
-.mapouter {
-  position: relative;
-  left: auto;
-  right: auto;
-  text-align: center;
-  align-items: center;
-  height: 350px;
-  width: 450px;
-}
 
 /*|||||||||||||||||||||||| home hero ||||||||||||||||||||||||||*/
 
@@ -367,8 +359,25 @@ active {
       rgba(177, 138, 191, 0)
     ),
     url("../images/carousel2_set.jpg");
-  background-size: cover;
+  background-size:cover;
 }
+
+.caption1{
+  top: 5%;
+}
+.caption2{
+  top: 43%;
+
+}
+.caption3{
+  top: 28%;
+}
+
+/* @media screen and (min-width: 1000px) {
+  .caption3 {
+    top: 35%;
+  }
+} */
 
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
 
@@ -664,54 +673,29 @@ active {
 }
 
 /*|||||||||||||||||||||||| footer styles ||||||||||||||||||||||||||*/
-div > iframe{
-  box-sizing: border-box;
-  height: 250px;
-  width: 250px;
-}
-@media screen and (min-width: 620px) {
-  iframe{
-    box-sizing: border-box;
-    height: 300px;
-    width: fit-content;
-  }
-}
 
-@media screen and (min-width: 960px) {
-  iframe{
-    box-sizing: border-box;
-    height: 325px;
-    width: fit-content;
-  }
-}
-
-.map-head {
-  text-align: center;
-  align-items: center;
+.footer-brand-name{
+  font-size: 3.5rem;
 }
 
 .col-title {
   text-transform: uppercase;
 }
 
-.map-col {
-  padding: auto 2% auto 2%;
-
-  width: fit-content;
+.link-col{
+  color: rgb(94, 91, 91);
+  line-height: 2;
 }
 
+
 .contact-col {
-  padding: 5% 2% 5% 2%;
   color: #f1f1f1;
   /* width: max-content; */
   background-color: #b18abf;
   line-height: 2;
 }
-
 .addr-col {
-  padding: 6.7% 2% 5% 2%;
   color: rgb(94, 91, 91);
-  width: max-content;
   line-height: 2;
 }
 
@@ -725,17 +709,26 @@ div > iframe{
 .foot-icon:hover {
   color: #ffd54b;
 }
-.contact-list {
+.contact-list, .link-list {
   padding: 0;
   list-style-type: none;
 }
 .contact-list > li > a {
   text-decoration: none;
-  color: white;
+  color:white;
 }
 .contact-list > li > a:hover {
   text-decoration: none;
   color: rgb(243, 243, 243);
+}
+
+.link-list > li > a {
+  text-decoration: none;
+  color:rgb(94,91,91);
+}
+.link-list > li > a:hover {
+  text-decoration: none;
+  color: rgb(49, 48, 48)
 }
 
 .socials-list {
@@ -983,16 +976,16 @@ a{
 /*/////////////////////////////types///////////////////////////////////////*/
 
 .implant-type-row{
-  margin: 4% auto 0px auto;
+  margin: 4% auto 0 auto;
 }
 
 .implant-types{
   list-style-type: none;
-  padding: 30px;
+  padding: 2.5%;
 }
 
 .type-list > li{
-  margin: 50px;
+  margin: 3.5%;
 }
 
 .type-list > li:last-child{
@@ -1000,7 +993,7 @@ a{
 }
 
 .type-row{
-  padding: 10px 15px 10px 15px;
+  padding: 0.8% 1% 0.8% 1%;
   border: #f2f2f2 solid 1px;
   box-shadow: 0px 0px 5px 5px #f2f2f2;
 }
@@ -1009,7 +1002,7 @@ a{
 
 
 .faq-section{
-  padding: 50px 50px 50px 50px;
+  padding: 3.5%;
 
 }
 .faq-section > h1{
@@ -1062,7 +1055,7 @@ a{
 /* before-after section */
 
 .before-after{
-  padding: 50px;
+  padding: 3.5%;
 }
 
 /*/////////////////////////////orthodontics///////////////////////////////////////*/
