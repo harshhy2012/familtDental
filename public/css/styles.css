@@ -250,10 +250,10 @@ div a:hover, p a:hover {
 
 @media screen and (max-width: 576px) {
   .brand-name {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
   .navbar-brand img{
-    width: 45px;
+    width: 42px;
   }
   .navbar-toggler{ 
     padding: 2px 5px; 
@@ -610,9 +610,6 @@ active {
 /*|||||||||||||||||||||||| back to top btn styles ||||||||||||||||||||||||||*/
 .back-to-top {
   color: aliceblue;
-  position: relative;
-  right: 23%;
-  bottom: 19%;
 }
 .back-to-top-btn {
   display: inline-block;
@@ -621,29 +618,31 @@ active {
   height: 50px;
   text-align: center;
   position: fixed;
-  height: 200px;
-  width: 200px;
-  right: -10%;
-  bottom: -10%;
+  height: 50px;
+  width: 50px;
+  right: 2%;
+  bottom: 8%;
   
   border-radius: 50%;
   z-index: 10;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .back-to-top-btn {
-
-    right: -5%;
-    bottom: -10%;
+    right: 2%;
+  bottom: 7%;
   }
 }
 
-
-
+@media screen and (max-width: 720px) {
+  .back-to-top-btn {
+    
+  }
+}
 
 .back-to-top-btn:hover {
-  background-color: rgb(221, 159, 241);
-  color: rgba(255, 255, 225);
+  background-color: #fac20b;
+  color: rgb(241, 241, 241);
 }
 
 .show {
