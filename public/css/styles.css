@@ -236,6 +236,32 @@ div a:hover, p a:hover {
   font-weight: bolder;
 }
 
+@media screen and (max-width: 1200px) {
+  .brand-name {
+    font-size: 1.8rem;
+  }
+  .navbar-brand img{
+    width: 55px;
+  }
+  .nav-link{
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  .navbar-brand img{
+    width: 45px;
+  }
+  .navbar-toggler{ 
+    padding: 2px 5px; 
+  }
+}
+
+
+
 active {
   color: #faba0b;
 }
