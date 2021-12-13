@@ -894,7 +894,14 @@ a{
   display: block;
   height: 230px;
 }
-.photo-zoom img {
+.photo-zoom-main{
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  height: 350px;
+}
+.photo-zoom img, .photo-zoom-main img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -960,7 +967,7 @@ a{
 /*/////////////////////////////hero///////////////////////////////////////*/
 
 .hero-row{
-  padding: 20px 0px 50px 0px;
+  padding: 1.6% 0 1.6% 0px;
   
 }
 .hero-row > p{
@@ -976,7 +983,7 @@ a{
 /*/////////////////////////////types///////////////////////////////////////*/
 
 .implant-type-row{
-  margin: 4% auto 0 auto;
+  margin: 2% auto 0 auto;
 }
 
 .implant-types{
@@ -984,12 +991,12 @@ a{
   padding: 2.5%;
 }
 
-.type-list > li{
-  margin: 3.5%;
+.type-list > li {
+  margin: 3%;
 }
 
 .type-list > li:last-child{
-  margin-bottom: 0;
+  margin-bottom: 3%;
 }
 
 .type-row{
@@ -1060,7 +1067,7 @@ a{
 
 /*/////////////////////////////orthodontics///////////////////////////////////////*/
 .fa-ul-treatment {
-  font-size: small;
+  font-size: 0.8rem;
   text-align: left;
   list-style-type: none;
   list-style-position: initial;
