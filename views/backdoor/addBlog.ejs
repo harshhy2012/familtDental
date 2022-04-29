@@ -7,32 +7,7 @@
       <label>Topic</label>
       <input class="form-control" id="blogTopic" type="text" name="postTopic">
       <label>Post</label>
-      <textarea id="editor" name="postBody"></textarea>
-      <script>
-        tinymce.init({
-          selector: 'textarea#editor',
-          skin: 'bootstrap',
-          plugins: 'lists, link, image  ',
-          toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
-          menubar: false,
-          setup: (editor) => {
-            // Apply the focus effect
-            editor.on("init", () => {
-              editor.getContainer().style.transition =
-                "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
-            });
-            editor.on("focus", () => {
-              (editor.getContainer().style.boxShadow =
-                "0 0 0 .2rem rgba(0, 123, 255, .25)"),
-                (editor.getContainer().style.borderColor = "#80bdff");
-            });
-            editor.on("blur", () => {
-              (editor.getContainer().style.boxShadow = ""),
-                (editor.getContainer().style.borderColor = "");
-            });
-          },
-        });
-      </script>
+      <textarea rows="5" name="postBody"></textarea>
     </div>
     <button class="btn btn-primary" type="submit" name="button">Publish</button>
   </form>

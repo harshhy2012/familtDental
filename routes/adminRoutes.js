@@ -1,3 +1,4 @@
+/* jslint esversion: 8 */
 const { Router } = require("express");
 const adminController = require("../controllers/adminController");
 

@@ -1,3 +1,4 @@
+/* jslint esversion: 8 */
 const mongoose = require("mongoose");
 const { isURL } = require("validator");
 

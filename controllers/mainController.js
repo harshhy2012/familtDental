@@ -79,7 +79,7 @@ module.exports.treatments_get = (req, res) => {
 
 module.exports.blog_get = async (req, res) => {
     try{const result = await Blog.find();
-        console.log(result);
+        //console.log(result);
         res.render("./main/blog", {blogs: result});
       }
       catch (err) {
