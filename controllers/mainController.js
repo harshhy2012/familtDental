@@ -78,7 +78,14 @@ module.exports.treatments_get = (req, res) => {
 };
 
 module.exports.blog_get = async (req, res) => {
-    try{const result = await Blog.find();
+    let {page} = req.params;
+    try{
+        if(!page){
+            page = 1;
+        }
+        const limit = 8;
+        const skip = (page-1)*limit;
+        const result = await Blog.find({}, {}, {limit: limit, skip: skip});
         //console.log(result);
         res.render("./main/blog", {blogs: result});
       }
@@ -86,6 +93,11 @@ module.exports.blog_get = async (req, res) => {
         console.log("\nerror here: \n",err);
       }
 };
+
+// blog pagination addition
+
+
+
 
 module.exports.blogPost_get = async (req,res) => {
     const reqBlog = req.params.blog_id;

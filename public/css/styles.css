@@ -358,7 +358,7 @@ active {
       rgba(142, 93, 159, 0.651),
       rgba(177, 138, 191, 0)
     ),
-    url("../images/carousel4_set.jpg");
+    url("https:///images.weserv.nl/?url=./public/images/welcomeImage.JPG");
   background-size: cover;
 }
 
