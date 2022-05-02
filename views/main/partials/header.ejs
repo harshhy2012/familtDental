@@ -4,36 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Family Dental home page" content="">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--icon-->
     <link rel="icon" href="/images/favicon.ico">
     <title>Family Dental</title>
-    <!--google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    
     <!-- bootstrap 5 css CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- owl carousel css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-        integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-        integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- MagnificPopup -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"
-        integrity="sha512-nIm/JGUwrzblLex/meoxJSPdAKQOe2bLhnrZ81g5Jbh519z8GFJIWu87WAhBH+RAyGbM4+U3S2h+kL5JoV6/wA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom CSS -->
     <link href="/css/styles.css" rel="stylesheet">
@@ -48,8 +29,8 @@
             <div class="modal-content">
                 <div class="modal-header px-3 pt-3">
                     <h5 class="modal-title px-5">Book an Appointment Now!</h5>
-                    <button type="button" id="closeMain" class="btn btn-shift" data-bs-dismiss="modal" aria-label="Close"><i
-                            class="far fa-times-circle fa-2x btn-shift"></i></button>
+                    <button type="button" id="closeMain" class="btn btn-shift" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="far fa-times-circle fa-2x btn-shift"></i></button>
                 </div>
                 <div class="modal-body justify-content-center">
                     <div class="form-section p-5">
@@ -82,7 +63,7 @@
                                 <small>Error Message</small>
                             </div>
                             <div class="form-floating">
-                                <textarea rows=30 class="form-control" name="message"  id = "message"
+                                <textarea rows=30 class="form-control" name="message" id="message"
                                     placeholder="Your Message.."></textarea>
                                 <label for="message">Your Message</label>
                             </div>
@@ -90,7 +71,7 @@
                     </div>
                 </div>
                 <div class="modal-footer pe-5">
-                    <button type="submit" class="btn btn-primary submit-btn  me-4" id="submit-modal" 
+                    <button type="submit" class="btn btn-primary submit-btn  me-4" id="submit-modal"
                         form="formID">Submit</button>
                 </div>
             </div>
@@ -98,31 +79,30 @@
     </div>
 
     <!-- Success Message -->
-    <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="successModalToggle"
-        tabindex="-1">
+    <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xl success-modal">
             <div class="modal-content success-modal">
                 <div class="modal-header" id="SuccessModalHeading">
-                   <button id = "successButtonClose" class="hide" data-bs-target="#successModal" data-bs-dismiss="modal"></button>
+                    <button id="successButtonClose" class="hide" data-bs-target="#successModal"
+                        data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="successModalToggle"><i class="far fa-check-circle"></i> Thank you,
                         your
                         response has been recorded, we will contact you shortly!</h2>
                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-footer">
-                    
                 </div>
             </div>
         </div>
     </div>
 
     <!-- failure Message -->
-    <div class="modal fade" id="failureModal" aria-hidden="true" aria-labelledby="successModalToggle"
-        tabindex="-1">
+    <div class="modal fade" id="failureModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
             <div class="modal-content success-modal">
                 <div class="modal-header">
-                    <button id = "failureButtonClose" class="hide" data-bs-target="#failureModal" data-bs-dismiss="modal"></button>
+                    <button id="failureButtonClose" class="hide" data-bs-target="#failureModal"
+                        data-bs-dismiss="modal"></button>
                     <h2 class="modal-title" id="successModalToggle"><i class="far fa-times-circle fa-2x"></i>
                         Something
                         Went Wrong! Please try again Later</h2>
@@ -132,11 +112,13 @@
             </div>
         </div>
     </div>
- 
-    <button id = "successButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#successModal" data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
-    <button id = "failureButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#failureModal" data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
-    
-   
+
+    <button id="successButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#successModal"
+        data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
+    <button id="failureButton" class="hide btn-hide" data-bs-toggle="modal" data-bs-target="#failureModal"
+        data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
+
+
 
     <header id="header">
 
@@ -148,21 +130,22 @@
                             <i class="fas fa-envelope head-icon"></i> familydentaldwarka@gmail.com
                         </a>
                     </p>
-                    
+
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <p class="time">
-                        <a target="_blank" href="https://www.google.com/search?q=family+dental+dwarka+sector+11&rlz=1C1ONGR_enIN984IN984&tbm=lcl&sxsrf=APq-WBt8rAE8P7Z2oXz5yHF5Ida4U7cbvA%3A1651004890187&ei=2lVoYvSSC8G_8QPx94LIDQ&oq=family+dental+dwarka+sector+11&gs_l=psy-ab.3..38l2.4451.7476.0.8669.10.10.0.0.0.0.140.1194.0j9.9.0....0...1c.1.64.psy-ab..1.8.1062...0i22i30k1.0.eSXphs1InFk#rlfi=hd:;si:17050521806782592399,l,Ch5mYW1pbHkgZGVudGFsIGR3YXJrYSBzZWN0b3IgMTFIifjvq4GwgIAIWi4QABABGAAYARgCGAMYBCIeZmFtaWx5IGRlbnRhbCBkd2Fya2Egc2VjdG9yIDExkgENZGVudGFsX2NsaW5pYw;mv:[[28.586946277319022,77.04419966372619],[28.586586322680965,77.04378973627382]]">
+                        <a target="_blank"
+                            href="https://www.google.com/search?q=family+dental+dwarka+sector+11&rlz=1C1ONGR_enIN984IN984&tbm=lcl&sxsrf=APq-WBt8rAE8P7Z2oXz5yHF5Ida4U7cbvA%3A1651004890187&ei=2lVoYvSSC8G_8QPx94LIDQ&oq=family+dental+dwarka+sector+11&gs_l=psy-ab.3..38l2.4451.7476.0.8669.10.10.0.0.0.0.140.1194.0j9.9.0....0...1c.1.64.psy-ab..1.8.1062...0i22i30k1.0.eSXphs1InFk#rlfi=hd:;si:17050521806782592399,l,Ch5mYW1pbHkgZGVudGFsIGR3YXJrYSBzZWN0b3IgMTFIifjvq4GwgIAIWi4QABABGAAYARgCGAMYBCIeZmFtaWx5IGRlbnRhbCBkd2Fya2Egc2VjdG9yIDExkgENZGVudGFsX2NsaW5pYw;mv:[[28.586946277319022,77.04419966372619],[28.586586322680965,77.04378973627382]]">
                             <i class="fab fa-google head-icon"></i> Search for us on google!
                         </a>
                     </p>
-                    
+
                 </div>
                 <div class="col-12 col-lg-4 phone text-center text-lg-end">
                     <i class="fas fa-phone head-icon"></i>
                     <a href="tel:+918851195050" class="phones">88511 95050</a>,
                     <a href="tel:+919582474046" class="phones">95824 74046</a>
-                   </a>
+                    </a>
                 </div>
             </div>
 
@@ -172,7 +155,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
             <div class="container-fluid p-sm-1">
-                
+
                 <a href="/" class="navbar-brand ">
                     <img src="./images/logo-02.png" alt="family dental logo" height="70" width="70"
                         class="img-fluid d-inline-block me-lg-2 me-1 my-auto">
@@ -192,15 +175,17 @@
                             <a class="nav-link active nav-hover" aria-current="page" href="/">Home</a>
                         </li>
 
-                        <li class="nav-item dropdown nav-hover" id="myDropdown">
-                            <a class="nav-link dropdown-toggle nav-hover" href="#" data-bs-toggle="dropdown">About
-                                Us</a>
+                        <li class="dropdown-submenu nav-item">
+                            <a href="#" class="dropdown-toggle dropdown-item nav-link nav-hover "
+                                data-toggle="dropdown">About Us</a>
+                            <!-- Level 3 -->
                             <ul class="dropdown-menu">
                                 <li> <a class="dropdown-item nav-hover" href="/ourClinic">Our Clinic</a>
                                 </li>
-                                <li> <a class="dropdown-item nav-hover" href="/ourDoctors">Our Team
-                                        &raquo; </a>
-                                    <ul class="submenu dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item nav-hover" href="/ourDoctors">Our Team</a>
+                                    <!-- Level 4 -->
+                                    <ul class="dropdown-menu">
                                         <li><a class="dropdown-item nav-hover" href="/ourDoctors#tushita">Dr.
                                                 Tushita</a></li>
                                         <li><a class="dropdown-item nav-hover" href="/OurDoctors#mahima">Dr.
@@ -210,16 +195,22 @@
                             </ul>
                         </li>
 
+                        <div class="imp-links">
+                            <li class="nav-item nav-hover">
+                                <a class="nav-link active nav-hover" aria-current="page"
+                                    href="/invisalign">Invisalign</a>
+                            </li>
+                            <li class="nav-item nav-hover">
+                                <a class="nav-link active nav-hover" aria-current="page" href="/invisalign">Flash</a>
+                            </li>
+                        </div>
 
-                        <li class="nav-item nav-hover">
-                            <a class="nav-link active nav-hover" aria-current="page" href="/invisalign">Invisalign</a>
-                        </li>
                         <li class="nav-item nav-hover">
                             <a class="nav-link active nav-hover" aria-current="page" href="/implants">Implants</a>
                         </li>
                         <li class="nav-item nav-hover">
                             <a class="nav-link active nav-hover" aria-current="page" href="/blog">Blog</a>
-                        </li> 
+                        </li>
                         <li class="nav-item nav-hover">
                             <a class="nav-link nav-hover" href="#contact-us" tabindex="-1" aria-disabled="true">Contact
                                 Us</a>
@@ -227,7 +218,7 @@
                         <li class="nav-item">
                             <form class="container-fluid justify-content-start">
                                 <button type="button" class=" btn btn-outline-light fd-btn" data-bs-toggle="modal"
-                                    data-bs-target="#appointmentModal">
+                                    id="appointment-btn" data-bs-target="#appointmentModal">
                                     Book Appointment
                                 </button>
                             </form>

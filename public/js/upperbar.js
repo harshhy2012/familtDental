@@ -1,10 +1,10 @@
-$(document).ready(function () {
+document.ready(function () {
 
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            $(".upper-nav").addClass("hide");
+    window.scroll(function () {
+        if (this.scrollTop() > 0) {
+            document.getElementByClassName("upper-nav").classList.add("hide");
         } else {
-            $('.upper-nav').removeClass("hide");
+            document.getElementByClassName("upper-nav").classList.remove("hide");
         }
     });
 

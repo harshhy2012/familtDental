@@ -1,18 +1,17 @@
-//use 'esversion: 6'
-
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 700) {
-        $(".back-to-top-btn").removeClass("hide");
-        $('.back-to-top-btn').fadeIn("fast");
+/* eslint jsversion: 8*/
+window.scroll(function () {
+    if (this.scrollTop() > 700) {
+        document.getElementByClassName("back-to-top-btn").classList.remove("hide");
+        document.getElementByClassName("back-to-top-btn").fadeIn("fast");
     } else {
-        $('.back-to-top-btn').fadeOut("fast");
+        document.getElementByClassName("back-to-top-btn").fadeOut("fast");
     }
 });
+const goToTopBtn = document.querySelector(".back-to-top-btn");
 
-$('.back-to-top-btn').on('click',() => {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 100);
-    return false;
+goToTopBtn.addEventListener('click',() => {
+    window.scrollTo({   
+    top: 0,
+    behavior: "smooth"
+  });
 });
-

@@ -1,11 +1,9 @@
-$(document).ready(function () {
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
-            $(".info-bar").addClass("hide");
+document.addEventListener("DOMContentLoaded", function(event) { 
+    window.scroll(function () {
+        if (this.scrollTop() > 0) {
+            document.getElementByClassName("info-bar").classList.add("hide");
         } else {
-            $('.info-bar').removeClass("hide");
+            document.getElementByClassName("info-bar").classList.remove("hide");
         }
     });
-
 });
