@@ -12,6 +12,7 @@ const mainRoutes = require("./routes/mainRoutes");
 const { requireAuth } = require("./middleware/authMiddleware");
 const stopCache = require("./middleware/stopCacheMiddleware");
 
+
 const app = express();
 
 app.set("view engine", "ejs");
