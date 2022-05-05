@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 let items = document.querySelectorAll('li');
 
 items.forEach(item =>  {

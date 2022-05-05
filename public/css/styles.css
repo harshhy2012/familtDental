@@ -1,37 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,900&display=swap');
-
-
 :root{
   --cl-primary-200: #b18abf;
   --cl-primart-400: #b18abf;
 }
-
-/* google fonts */
-
-
 html {
   scroll-behavior: "smooth";
   overflow-x: hidden;
 }
-
 body {
   font-family: "Montserrat";
   text-align: center;
   line-height: 1.5;
   margin: 0;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway";
 }
-
 a{
   text-decoration: none;
 }
@@ -42,20 +28,17 @@ p{
 i {
   color: #b18abf;
 }
-
 .btn{
   color: #b18abf;
   background-color: white;
 }
 .btn:hover{
   color: #b18abf;
-
 }
 
 /* .btn-secondary{
 
 } */
-
 /******************************** Modal form ************************************/
 .modal-dialog {
   height: 100%;
@@ -70,8 +53,6 @@ i {
   line-height: 1.5;
   color: #777676;
 }
-
-
 input[type="text"] {
   color: #fac20b !important;
   margin-bottom: 20px;
@@ -79,38 +60,29 @@ input[type="text"] {
 input[type="tel"] {
   color: #fac20b !important;
   margin-bottom: 20px;
-
 }
 input[type="email"] {
   color: #fac20b !important;
   margin-bottom: 50px;
-
 }
-
 textarea {
   height: 150px !important;
   margin-bottom: 10px;
-
   color: #fac20b !important;
 }
-
 .form-floating i.fa-check-circle, .form-floating i.fa-exclamation-circle{
   visibility: hidden;
   position: absolute;
   bottom:50px;
   right:50px;
 }
-
-
 .form-floating small{
   visibility: hidden;
   position: absolute;
 }
-
 .form-floating.success input{
   border-color: #2ecc71;
 }
-
 .form-floating.error input{
   border-color: #e74c3c;
 }
@@ -120,35 +92,30 @@ textarea {
   background-color: white;
   color: #2ecc71; 
 }
-
 .form-floating.error i.fa-exclamation-circle{
   visibility: visible;
   z-index: 2;
   background-color: white;
   color: #e74c3c;
 }
-
 .form-floating.error small{
   color: #e74c3c;
   top: 5%;
   left:2%;
   visibility: visible;
 }
-
 .btn-shift {
   position: relative;
   z-index: 10000;
   bottom: 10px;
   left: 10px;
 }
-
 .modal-title {
   border: 0;
   font-size: 2.2rem;
   text-transform: uppercase;
   color: #fac20b;
 }
-
 .modal-header,
 .modal-conent,
 .modal-footer {
@@ -194,7 +161,6 @@ p span {
 p > i {
   color: #b18abf;
 }
-
 div a, p a {
   color: rgb(107, 101, 101);
   text-decoration: none;
@@ -216,15 +182,11 @@ div a:hover, p a:hover {
   padding: 0;
   margin: 0;
 }
-
 @media screen and (min-width: 240px) {
   .timings, .emails, .phones{
     font-size: 0.8rem;
   }
 }
-
-
-
 
 /*|||||||||||||||||||||||| fixed nav bar ||||||||||||||||||||||||||*/
 .navbar
@@ -245,7 +207,6 @@ div a:hover, p a:hover {
   color: #b18abf;
   font-weight: bolder;
 }
-
 .imp-links{
   position: relative;
   top: -4px;
@@ -253,7 +214,6 @@ div a:hover, p a:hover {
   border: 4px dotted #b18abf;
   border-radius: 10px;
 }
-
 @media screen and (max-width: 1200px) {
   .brand-name {
     font-size: 1.8rem;
@@ -265,7 +225,6 @@ div a:hover, p a:hover {
     font-size: 0.9rem;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .brand-name {
     font-size: 1.15rem;
@@ -280,25 +239,20 @@ div a:hover, p a:hover {
     padding: 2px 5px; 
   }
 }
-
-
-
 active {
   color: #faba0b;
 }
-
 .nav-item {
   font-size: 0.9rem;
   padding-left: 5px;
   padding-right: 5px;
 }
-
 .head-icon:hover {
   color: #c78ddb;
 }
 .nav-hover:hover {
   color: #ffd902 !important;
-  background-color: #b1b1b1;
+  
   border-radius: 4px;
 }
 .btn-outline-success {
@@ -314,52 +268,22 @@ active {
   background-color: #b18abf;
   border-color: #b18abf;
 }
-
 .dropdown-submenu {
   position: relative;
 }
 
-.dropdown-submenu>.dropdown-menu {
-  top: 100%;
-  left: 0%;
-  margin-top: -6px;
-  margin-left: -1px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
 }
 
-.dropdown:hover>.dropdown-menu {
-  display: block;
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
 }
-
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #ccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-
-.dropdown-submenu:hover>a:after {
-  border-left-color: #fff;
-}
-
-
-
+    
 /* ============ desktop view ============ */
 /* @media all and (min-width: 992px) {
-
 	.dropdown-menu li{
 		position: relative;
 	}
@@ -371,28 +295,21 @@ active {
 	.dropdown-menu .submenu-left{ 
 		right:100%; left:auto;
 	}
-
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{
 		display: block;
 	}
 }	 */
 /* ============ desktop view .end// ============ */
-
 /* ============ small devices ============ */
 /* @media (max-width: 991px) {
-
 .dropdown-menu .dropdown-menu{
 		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
 }
-
 } */
 /* ============ small devices .end// ============ */
-
 /*|||||||||||||||||||||||| maps ||||||||||||||||||||||||||*/
-
 /*|||||||||||||||||||||||| home hero ||||||||||||||||||||||||||*/
-
 .circle {
   height: 15px !important;
   width: 15px !important;
@@ -410,32 +327,18 @@ active {
       rgba(142, 93, 159, 0.651),
       rgba(177, 138, 191, 0)
     ),
-    url("https://images.weserv.nl/?url=https://familydentaldwarka.in/images/welcomeImage.JPG&q=40");
+    url("https://images.weserv.nl/?url=https://familydentaldwarka.in/images/welcomeImage.webp&q=40");
   background-size: cover;
 }
-
-
 .caption1{
   top: 5%;
 }
-.caption2{
-  top: 43%;
-
-}
-.caption3{
-  top: 28%;
-}
-
 /* @media screen and (min-width: 1000px) {
   .caption3 {
     top: 35%;
   }
 } */
-
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
-
-
-
 .card {
   color: rgb(230, 230, 230);
   border: none;
@@ -476,9 +379,7 @@ active {
 .card-color_6 {
   background-color: #b074e7;
 }
-
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
-
 .appoint-btn-col {
   text-align: center;
   align-items: center;
@@ -489,43 +390,33 @@ active {
   border-color: #b18abf;
   color: #b18abf;
 }
-
 .appoint-btn:hover {
   color: #ffd900;
   background-color: #b18abf;
   border-color: #b18abf;
 }
-
-
-
 /*|||||||||||||||||||||||| reviews styles ||||||||||||||||||||||||||*/
-
 .review-row {
   color: white;
   background-color: #b18abf;
   display: flex;
   padding-top: 40px;
 }
-
 .image-wrapper {
   background-color: white;
   padding: 15px;
   padding-bottom: 0px;
 }
-
 .image-wrapper h5 {
   padding: 10px;
   color: #b18abf;
 }
-
 .carousel-wrapper {
   width: 75%;
 }
-
 .review-carousel {
   margin: 50px auto 50px auto;
 }
-
 .review-card {
   border-radius: 25px;
   background-color: white;
@@ -541,7 +432,6 @@ active {
   color: white;
   margin: 1px;
 }
-
 .review-text {
   color: #b18abf;
   text-align: justify;
@@ -550,7 +440,6 @@ active {
 .review-text > h4 {
   padding-bottom: 10%;
 }
-
 .review-img {
   width: 50%;
   border: #bdbdbd solid 50px 50px 100px 50px;
@@ -574,23 +463,18 @@ active {
   margin-right: 25px;
   color: #fac20b;
 }
-
 /*|||||||||||||||||||||||| testimonial styles ||||||||||||||||||||||||||*/
-
 .test-row {
   margin: 50px auto 50px auto;
 }
-
 .test-carousel {
   margin: 50px auto 50px auto;
 }
-
 .test-card {
   display: flex;
   width: 400px;
   margin: 20px;
 }
-
 .test-img-area {
   float: left;
   padding: 5px 10px 5px 10px;
@@ -606,7 +490,6 @@ active {
   border-radius: 50%;
   border: #faba0b solid 3px;
 }
-
 .test-text {
   border-radius: 6%;
   background-color: #b18abf;
@@ -617,7 +500,6 @@ active {
   font-size: 0.85rem;
   color: #ffffff;
 }
-
 .test-text h4 {
   text-align: left;
   font-size: 1.2rem;
@@ -633,7 +515,6 @@ active {
   right: 7%;
   z-index: -1;
 }
-
 /*|||||||||||||||||||||||| back to top btn styles ||||||||||||||||||||||||||*/
 .back-to-top {
   color: aliceblue;
@@ -649,30 +530,25 @@ active {
   width: 50px;
   right: 2%;
   bottom: 8%;
-  
   border-radius: 50%;
   z-index: 10;
 }
-
 @media screen and (max-width: 1200px) {
   .back-to-top-btn {
     right: 2%;
     bottom: 7%;
   }
 }
-
 @media screen and (max-width: 720px) {
   .back-to-top-btn {
     right: 5%;
     bottom: 9%;
   }
 }
-
 .back-to-top-btn:hover {
   background-color: #fac20b;
   color: rgb(241, 241, 241);
 }
-
 .show {
   visibility: visible;
   opacity: 1;
@@ -685,39 +561,28 @@ active {
   margin: 0;
   opacity: 0;
 }
-
-/**/
 .btn-hide{
   position: absolute;
   z-index: -1;
   margin: 0;
   padding: 0;
 }
-
 .fade{
   -webkit-transition: all 0.3s linear !important;
   -o-transition: all 0.3s linear !important;
   transition: all 0.3s linear !important;
 }
-
 /* .fade.out{
   -webkit-transition: all 0.3s linear !important;
   -o-transition: all 0.2s linear !important;
   transition: all 0.2s linear !important;
 } */
 /**/
-
 /*|||||||||||||||||||||||| top bar styles ||||||||||||||||||||||||||*/
-
-.erw{
-  color: #fac20b;
-}
-
 .appoint-text-col {
   text-align: left;
   width: fit-content;
 }
-
 .call-for-action-btn {
   font-size: 1.4rem;
   color: #b18abf;
@@ -728,23 +593,17 @@ active {
   background-color: #b18abf;
   border-color: #b18abf;
 }
-
 /*|||||||||||||||||||||||| footer styles ||||||||||||||||||||||||||*/
-
 .footer-brand-name{
   font-size: 3.5rem;
 }
-
 .col-title {
   text-transform: uppercase;
 }
-
 .link-col{
   color: rgb(94, 91, 91);
   line-height: 2;
 }
-
-
 .contact-col {
   color: #f1f1f1;
   /* width: max-content; */
@@ -755,7 +614,6 @@ active {
   color: rgb(94, 91, 91);
   line-height: 2;
 }
-
 .footer-time {
   color: #f1f1f1;
   font-weight: 500;
@@ -778,7 +636,6 @@ active {
   text-decoration: none;
   color: rgb(243, 243, 243);
 }
-
 .link-list > li > a {
   text-decoration: none;
   color:rgb(94,91,91);
@@ -787,7 +644,6 @@ active {
   text-decoration: none;
   color: rgb(49, 48, 48)
 }
-
 .socials-list {
   padding: 0;
   list-style-type: none;
@@ -795,7 +651,6 @@ active {
 .socials-list > li {
   display: inline-block;
 }
-
 .foot {
   padding: 1% auto 1% auto;
   background-color: rgb(211, 211, 211);
@@ -807,9 +662,7 @@ active {
   line-height: 2;
   font-weight: 500;
 }
-
 /********************************** Blog ***********************************/
-
 /* stylelint-disable selector-list-comma-newline-after */
 .blog-content{
   display: flex;
@@ -820,15 +673,12 @@ active {
   margin: 0 10%;
   text-align: justify;
 }
-
 .sidebar{
   padding: 20px 100px 0 175px;
 }
-
 .blog-tile{
   padding: 1%;
 }
-
 .bg-fd {
   background-color: #b18abf;
 }
@@ -840,20 +690,16 @@ active {
     font-size: 3rem;
   }
 }
-
 .card{
   box-sizing: border-box !important; 
 }
-
 .card-img-right {
   height: 100%;
   border-radius: 0 3px 3px 0;
 }
-
 .flex-auto {
   flex: 0 0 auto;
 }
-
 .h-250 {
   height: 250px;
 }
@@ -862,7 +708,6 @@ active {
     height: 250px;
   }
 }
-
 /* Pagination */
 .blog-pagination {
   margin-bottom: 4rem;
@@ -874,10 +719,7 @@ active {
   padding-left: 75px;
   padding-right: 75px;
 }
-/*
-   * Blog posts
-   */
-
+/** Blog posts*/
 .blog-grid{
   padding: 0 0 0 10%;
 }
@@ -901,11 +743,8 @@ a{
 .list-unstyled{
   color: #727272;
 }
-
 /******************************About Us styles***********************************/
-
 /*/////////////////////////////Our Clinic///////////////////////////////////////*/
-
 .clinic-photo {
   margin: auto auto;
   text-align: center;
@@ -928,9 +767,7 @@ a{
 .album-container img {
   height: fit-content;
 }
-
 /*///////////////////////////////Album/////////////////////////////*/
-
 .gg-container {
   --main-color: #000;
   --secondary-color: #111;
@@ -941,7 +778,6 @@ a{
   --row-height: 200px;
   --column-width: 220px;
 }
-
 .gg-container *[data-theme="dark"] {
   --main-color: #ddd;
   --secondary-color: #eee;
@@ -949,7 +785,6 @@ a{
   --img-bg-color: rgba(20, 20, 20, 0.9);
   --backdrop-color: rgba(30, 30, 30, 0.9);
 }
-
 .gg-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
@@ -957,7 +792,6 @@ a{
   grid-gap: var(--gap-length);
   margin: 20px 0;
 }
-
 .gg-box img {
   padding: 2px;
   border-radius: 5px; 
@@ -968,11 +802,9 @@ a{
   height: 100%;
   background: var(--img-bg-color);
 }
-
 .gg-box img:hover {
   opacity: 0.98;
 }
-
 #gg-screen {
   position: fixed;
   width: 100%;
@@ -983,20 +815,17 @@ a{
   z-index: 9999;
   text-align: center;
 }
-
 #gg-screen .gg-image {
   height: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-
 #gg-screen .gg-image img {
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
 }
-
 .gg-btn {
   display: flex;
   align-items: center;
@@ -1018,37 +847,31 @@ a{
   position: fixed;
 font-weight:700;
 }
-
 .gg-btn:hover {
   position: absolute;
   background: var(--secondary-color);
 }
-
 .gg-close {
   top: 5%;
   right: 1%;
   border-radius: 10%;
 }
-
 .gg-next {
   top:50%;
   right: 1%;
   border-radius: 10%;
   margin-left: 150px;
 }
-
 .gg-prev {
   top:50%;
   left: 1%;
   border-radius:10%;
   margin-right: 150px;
 }
-
 .gg-prev,
 .gg-next {
   bottom: 10px;
 }
-
 @media (min-width: 478px) {
   .gg-box img:nth-child(2n):not(:last-of-type) {
     grid-row-end: span 2;
@@ -1064,7 +887,6 @@ font-weight:700;
     grid-column-end: span 1;
   }
 }
-
 @media (max-width: 768px) {
   .gg-box {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1072,16 +894,12 @@ font-weight:700;
     margin: 10px 0;
   }
 }
-
 @media (max-width: 450px) {
   .gg-box {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   }
 }
-
-
 /*/////////////////////////////Our Doctors///////////////////////////////////////*/
-
 .photo-desc {
   padding: 0 !important;
   margin: 0;
@@ -1096,60 +914,45 @@ font-weight:700;
 .doc-wrapper {
   margin: auto auto;
 }
-
 /******************************Implants styles***********************************/
-
 .implant-section{
   margin: 3% auto 3% auto;
   padding: 1% 1.5% 1% 1.5%;
   border: #f2f2f2 solid 1px;
   box-shadow: 0px 0px 1% 10px #f2f2f2;
 }
-
 /*/////////////////////////////hero///////////////////////////////////////*/
-
 .hero-row{
   padding: 1.6% 0 1.6% 0px;
-  
 }
 .hero-row > p{
   text-align: justify;
   margin: 2% auto;
   padding: 0 5%;
 }
-
 .hero-row h1{
   margin: 10px auto;
 }
-
 /*/////////////////////////////types///////////////////////////////////////*/
-
 .implant-type-row{
   margin: 2% auto 0 auto;
 }
-
 .implant-types{
   list-style-type: none;
   padding: 2.5%;
 }
-
 .type-list > li {
   margin: 3%;
 }
-
 .type-list > li:last-child{
   margin-bottom: 3%;
 }
-
 .type-row{
   padding: 0.8% 1% 0.8% 1%;
   border: #f2f2f2 solid 1px;
   box-shadow: 0px 0px 5px 5px #f2f2f2;
 }
 /*/////////////////////////////FAQ///////////////////////////////////////*/
-
-
-
 .faq-section{
   padding: 3.5%;
 
@@ -1157,7 +960,6 @@ font-weight:700;
 .faq-section > h1{
   margin: 0% auto 3% auto;
 }
-
 .x-accordion-heading .x-accordion-toggle {
   color: #aaaaaa;
   background-color: #b18abf;
@@ -1170,22 +972,17 @@ font-weight:700;
   color: #b18abf;
   background-color: #b18abf17;
 }
-
 .accordion-button:focus{
   border-color: #b18abf83;
   box-shadow:  0 0 0.25rem #b18abf83;
 }
-
 .accordion-button:not(.collapsed)::after{
   filter: grayscale( );
 }
-
 .accordion-body{
   text-align: justify;
 }
-
 /******************************Invisilign styles***********************************/
-
 .link-style{
   text-decoration: none;
   color: #b18abf;
@@ -1196,17 +993,12 @@ font-weight:700;
   color: #9566a7;
   font-weight: 500;
 }
-
 /******************************treatment styles***********************************/
-
 /*/////////////////////////////periodontics///////////////////////////////////////*/
-
 /* before-after section */
-
 .before-after{
   padding: 3.5%;
 }
-
 /*/////////////////////////////orthodontics///////////////////////////////////////*/
 .fa-ul-treatment {
   font-size: 0.8rem;
@@ -1216,7 +1008,6 @@ font-weight:700;
   padding-top: 1%;
 
 }
-
 .bubble{
   padding: 2% 0;
   margin: 0 auto;

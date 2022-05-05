@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 let map;
 
 function initMap() {

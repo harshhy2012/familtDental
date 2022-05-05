@@ -1,4 +1,4 @@
-/* eslint jsversion: 8*/
+/* jshint esversion: 8 */
 window.scroll(function () {
     if (this.scrollTop() > 700) {
         document.getElementByClassName("back-to-top-btn").classList.remove("hide");
