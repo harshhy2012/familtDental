@@ -1,7 +1,6 @@
 /* jshint esversion: 8 */
 const User = require("../models/User");
 const Blog = require('../models/Blogpost');
-const invisPhotos = require('../public/js/invis-Photos');
 const fs = require('fs');
 
 
