@@ -1,6 +1,8 @@
 /* jshint esversion: 8 */
 const User = require("../models/User");
 const Blog = require('../models/Blogpost');
+const invisPhotos = require('../public/js/invis-Photos');
+const fs = require('fs');
 
 
 const handleMainErrors = (err) => {
@@ -95,9 +97,6 @@ module.exports.blog_get = async (req, res) => {
 };
 
 // blog pagination addition
-
-
-
 
 module.exports.blogPost_get = async (req,res) => {
     const reqBlog = req.params.blog_id;
