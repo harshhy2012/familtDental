@@ -14,6 +14,10 @@ router.get("/ourDoctors", mainController.ourDoctors_get);
 
 router.get("/invisalign", mainController.invisalign_get);
 
+router.get("/flash", mainController.flash_get);
+
+router.get("/technology", mainController.technology_get);
+
 router.get("/implants", mainController.implants_get);
 
 router.get("/treatments", mainController.treatments_get);

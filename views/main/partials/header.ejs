@@ -21,8 +21,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- gildejs css-->
-    <link rel="stylesheet" href="/css/glide.core.min.css">
-    <link rel="stylesheet" href="/css/glide.theme.min.css">
+    <link rel="stylesheet" href="/css/glideCSS/glide.core.min.css">
+    <link rel="stylesheet" href="/css/glideCSS/glide.theme.min.css">
     <!-- custom CSS -->
     <link href="/css/styles.css" rel="stylesheet">
 </head>
@@ -30,9 +30,9 @@
 <body>
 
     <!-- Modal -->
-    <div class="modal fade" id="appointmentModal" tabindex="-1" role="form" aria-labelledby="appointmentModalTitle"
+    <div class="modal fade shadow" id="appointmentModal" tabindex="-1" role="form" aria-labelledby="appointmentModalTitle"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="form">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md" role="form">
             <div class="modal-content">
                 <div class="modal-header px-3 pt-3">
                     <h5 class="modal-title px-5">Book an Appointment Now!</h5>
@@ -40,7 +40,7 @@
                         aria-label="Close"><i class="far fa-times-circle fa-2x btn-shift"></i></button>
                 </div>
                 <div class="modal-body justify-content-center">
-                    <div class="form-section p-5">
+                    <div class="form-section px-5 py-3">
                         <form class="form" id="formID">
                             <div class="form-floating">
 
@@ -86,7 +86,7 @@
     </div>
 
     <!-- Success Message -->
-    <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
+    <div class="modal fade shadow-lg" id="successModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xl success-modal">
             <div class="modal-content success-modal">
                 <div class="modal-header" id="SuccessModalHeading">
@@ -104,7 +104,7 @@
     </div>
 
     <!-- failure Message -->
-    <div class="modal fade" id="failureModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
+    <div class="modal fade shadow" id="failureModal" aria-hidden="true" aria-labelledby="successModalToggle" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg success-modal">
             <div class="modal-content success-modal">
                 <div class="modal-header">
@@ -126,6 +126,11 @@
         data-target="#successModal" data-bs-dismiss="#appointmentModal"></button>
 
 
+    <!-- <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Click here to contact on whatsapp">
+        <a class="popup-btn fixed-bottom fixed-left" href="https://wa.me/918851195050?text=Can%20I%20book%20an%20appointment" target="_blank"><i
+            class="fab fa-whatsapp foot-icon fa-3x"></i></a>
+    </span> -->
+    
 
     <header id="header">
 
@@ -160,7 +165,7 @@
 
         <hr class="info-bar horizontal-rule">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 shadow">
             <div class="container-fluid p-sm-1">
 
                 <a href="/" class="navbar-brand ">
@@ -203,12 +208,15 @@
                                     href="/invisalign">Invisalign</a>
                             </li>
                             <li class="nav-item nav-hover">
-                                <a class="nav-link active nav-hover" aria-current="page" href="/invisalign">Flash</a>
+                                <a class="nav-link active nav-hover" aria-current="page" href="/flash">Flash</a>
                             </li>
                         </div>
 
                         <li class="nav-item nav-hover">
                             <a class="nav-link active nav-hover" aria-current="page" href="/implants">Implants</a>
+                        </li>
+                        <li class="nav-item nav-hover">
+                            <a class="nav-link active nav-hover" aria-current="page" href="/technology">Technology</a>
                         </li>
                         <li class="nav-item nav-hover">
                             <a class="nav-link active nav-hover" aria-current="page" href="/blog">Blog</a>

@@ -71,6 +71,12 @@ module.exports.ourDoctors_get = (req, res) => {
 module.exports.invisalign_get = (req, res) => {
     res.render('./main/invisalign');
 };
+module.exports.flash_get = (req, res) => {
+    res.render('./main/flash');
+};
+module.exports.technology_get = (req, res) => {
+    res.render('./main/technology');
+};
 module.exports.implants_get = (req, res) => {
     res.render('./main/implants');
 };

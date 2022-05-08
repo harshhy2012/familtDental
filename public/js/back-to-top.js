@@ -1,14 +1,16 @@
 /* jshint esversion: 8 */
-window.scroll(function () {
-    if (this.scrollTop() > 700) {
-        document.getElementByClassName("back-to-top-btn").classList.remove("hide");
-        document.getElementByClassName("back-to-top-btn").fadeIn("fast");
+
+
+console.log(window.scrollY);
+const goToTopBtn = document.querySelector(".back-to-top-btn");
+window.addEventListener("scroll", () => {
+    console.log(window.scrollY)
+    if (window.scrollY > 700) {
+        goToTopBtn.classList.remove("hide");
     } else {
-        document.getElementByClassName("back-to-top-btn").fadeOut("fast");
+        goToTopBtn.classList.add("hide");
     }
 });
-const goToTopBtn = document.querySelector(".back-to-top-btn");
-
 goToTopBtn.addEventListener('click',() => {
     window.scrollTo({   
     top: 0,

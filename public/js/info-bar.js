@@ -1,7 +1,6 @@
 /* jshint esversion: 8 */
 let lastScroll = 0;
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
   if (window.scrollY <= 0) {
     document.querySelector(".info-bar").classList.remove("hide");
     return;

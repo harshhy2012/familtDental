@@ -55,19 +55,18 @@ i {
 }
 input[type="text"] {
   color: #fac20b !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 input[type="tel"] {
   color: #fac20b !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 input[type="email"] {
   color: #fac20b !important;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 textarea {
-  height: 150px !important;
-  margin-bottom: 10px;
+  height: 120px !important;
   color: #fac20b !important;
 }
 .form-floating i.fa-check-circle, .form-floating i.fa-exclamation-circle{
@@ -1015,4 +1014,14 @@ font-weight:700;
   color: #5d4b637c;
   width: 10%;
   text-align: center;
+}
+
+.popup-btn{
+  display: inline-block;
+  text-align: center;
+  position: fixed;
+  left: 2%;
+  bottom: 8%;
+  z-index: 10;
+
 }
