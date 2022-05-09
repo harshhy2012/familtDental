@@ -338,26 +338,26 @@ active {
   }
 } */
 /*|||||||||||||||||||||||| cards styles ||||||||||||||||||||||||||*/
-.card {
+.treatment-card {
   color: rgb(230, 230, 230);
   border: none;
   transition-duration: 200ms;
   transition-property: transform;
   transition-timing-function: ease-in;
 }
-.card:hover {
+.treatment-card:hover {
   color: #fff;
   transform: translateY(-4.9%);
   z-index: 4;
 }
-.card-icon {
+.treatment-card-icon {
   filter: brightness(0) invert(1);
   padding: 9%;
 }
-.card-title {
+.treatment-card-title {
   text-transform: uppercase;
 }
-.card-footer {
+.treatment-card-footer {
   border: 0;
 }
 .card-color_1 {
