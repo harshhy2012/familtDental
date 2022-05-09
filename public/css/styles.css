@@ -150,7 +150,7 @@ textarea {
 .info-bar {
   box-sizing: border-box;
   padding: 0.5% 5% 0.5% 5%;
-  font-size: 1em;
+  font-size: 1.1em;
   color: rgb(94, 91, 91);
 }
 p span {
@@ -183,7 +183,7 @@ div a:hover, p a:hover {
 }
 @media screen and (min-width: 240px) {
   .timings, .emails, .phones{
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
