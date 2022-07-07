@@ -1,14 +1,17 @@
+/* jslint esversion: 8 */
 require("dotenv").config();
 const bcrypt = require("bcrypt");
 
 const Admin = { mahima: "", tushita: "" };
 const pws = process.env.pw.split(",");
 
+console.log(pws, typeof(pws));
+
 bcrypt.hash(pws[0], parseInt(process.env.SALT_ROUNDS), function (err, hash) {
   Admin.mahima = hash;
 });
 
-bcrypt.hash(pws[1], process.env.SALT_ROUNDS, function (err, hash) {
+bcrypt.hash(pws[1], parseInt(process.env.SALT_ROUNDS), function (err, hash) {
   Admin.tushita = hash;
 });
 

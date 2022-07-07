@@ -42,13 +42,13 @@ form.addEventListener('submit', async (e) => {
         if(data.user){
             //give success modal!
             
-            $("#closeMain").trigger("click", () => {
+            document.getElementById("#closeMain").trigger("click", () => {
             });
             
             setTimeout(() => {
-                $("#successButton").trigger("click");
+                document.getElementById("#successButton").trigger("click");
                 setTimeout(() => {
-                    $("#successButtonClose").trigger("click");
+                    document.getElementById("#successButtonClose").trigger("click");
                 },5000);
             },1000);
 
@@ -56,13 +56,13 @@ form.addEventListener('submit', async (e) => {
     }
     catch (err){
         //give failure modal!
-        $("#closeMain").trigger("click", () => {
+        document.getElementById("#closeMain").trigger("click", () => {
         });
         
         setTimeout(() => {
-            $("#successButton").trigger("click");
+            document.getElementById("#successButton").trigger("click");
             setTimeout(() => {
-                $("#successButtonClose").trigger("click");
+                document.getElementById("#successButtonClose").trigger("click");
             },5000);
         },1000);
     }

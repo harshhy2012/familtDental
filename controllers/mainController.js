@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
 const User = require("../models/User");
 const Blog = require('../models/Blogpost');
+const fs = require('fs');
 
 
 const handleMainErrors = (err) => {
@@ -70,6 +71,12 @@ module.exports.ourDoctors_get = (req, res) => {
 module.exports.invisalign_get = (req, res) => {
     res.render('./main/invisalign');
 };
+module.exports.flash_get = (req, res) => {
+    res.render('./main/flash');
+};
+module.exports.technology_get = (req, res) => {
+    res.render('./main/technology');
+};
 module.exports.implants_get = (req, res) => {
     res.render('./main/implants');
 };
@@ -78,14 +85,23 @@ module.exports.treatments_get = (req, res) => {
 };
 
 module.exports.blog_get = async (req, res) => {
-    try{const result = await Blog.find();
-        console.log(result);
+    let {page} = req.params;
+    try{
+        if(!page){
+            page = 1;
+        }
+        const limit = 8;
+        const skip = (page-1)*limit;
+        const result = await Blog.find({}, {}, {limit: limit, skip: skip});
+        //console.log(result);
         res.render("./main/blog", {blogs: result});
       }
       catch (err) {
         console.log("\nerror here: \n",err);
       }
 };
+
+// blog pagination addition
 
 module.exports.blogPost_get = async (req,res) => {
     const reqBlog = req.params.blog_id;

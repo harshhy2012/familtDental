@@ -1,3 +1,4 @@
+/* jslint esversion: 8 */
 require("dotenv").config();
 // const path = require("path");
 const express = require("express");
@@ -10,6 +11,7 @@ const adminRoutes = require("./routes/adminRoutes");
 const mainRoutes = require("./routes/mainRoutes");
 const { requireAuth } = require("./middleware/authMiddleware");
 const stopCache = require("./middleware/stopCacheMiddleware");
+
 
 const app = express();
 

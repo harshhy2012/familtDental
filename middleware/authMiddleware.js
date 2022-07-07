@@ -1,3 +1,4 @@
+/* jslint esversion: 8 */
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const Admin = require('../models/Admin.js');

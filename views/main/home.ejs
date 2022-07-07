@@ -1,164 +1,149 @@
 <%- include("./partials/header"); -%>
 
-  <div id="myCarousel" class="carousel slide carousel-bg" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active circle" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" class="circle"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" class="circle"
-        aria-label="Slide 3"></button>
+  <div class="container welcome-img">
+    <div class="carousel-caption caption1 text-start text-sm-end d-inline-block ">
+      <h1 class="display-1 align-text-top">Family Dental</h1>
+      <p class="lead align-text-top">A braces and multispeciality Clinic</p>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active carousel1-img">
-        <!-- <img src="images/carousel1.jpeg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"> -->
-        <div class="container">
-          <div class="carousel-caption caption1 text-start text-sm-end d-inline-block ">
-            <h1 class="display-1 align-text-top">Family Dental</h1>
-            <p class="lead align-text-top">A braces and multispeciality Clinic</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item carousel2-img">
-        <!-- <img src="images/carousel2.jpeg" class="bd-placeholder-img" width="100%" height="100%"  aria-hidden="true"> -->
-
-        <div class="container">
-          <div class="carousel-caption caption2">
-            <p class="align-text-center display-4">Creating beautiful and brighter smiles.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item carousel3-img">
-        <!-- <img src="images/carousel1.jpeg" class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true"> -->
-        <div class="container align-items-center ">
-          <div class="carousel-caption caption3 display-4">
-            <p>Ensuring smiles at affordable prices.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
+
 
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
+  <%- include("./partials/main-carousel"); -%>
 
+    <!-- six columns of text below the carousel -->
 
-  <!-- six columns of text below the carousel -->
-
-  <div class="row justify-content-center my-4 mx-1">
-    <div class="card card-color_1 col-12 col-md-6 col-lg-4 col-xl-2">
-      <img src="images/whiten.png" class="mx-auto card-icon" alt="..." width="160" height="160"
-        aria-label="whittening icon">
-      <div class="card-body">
-        <h5 class="card-title">cosmetic Dentistry</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This content is a little bit longer.</p>
+    <div class="row justify-content-center my-4 mx-1">
+      <div class="card treatment-card card-color_1 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/whiten.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="shining teeth icon" width="160" height="160" style="padding: 10px;"
+          aria-label="whittening icon">
+        <div class="card-body">
+          <h5 class="card-title treatment-card-title">cosmetic Dentistry</h5>
+          <p class="card-text treatment-card-text">
+            You can enhance or beautify your smile by changing the shape, color,
+            size and total
+            appearance of your teeth and the cosmetic dental procedures like aesthetic filling, veneers, bleaching,
+            aesthetic crown, crown lengthening help you get your dream smile.
+          </p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#cosmetic-dentistry" type="button">View details &raquo;</a>
+        </div>
       </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#cosmetic-dentistry" type="button">View details &raquo;</a>
+      <div class="card treatment-card card-color_2 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/implant.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="dental implant icon" width="160" height="160" style="padding: 10px;"
+          aria-label="implant icon">
+        <div class="card-body" style="border-radius: 5px;">
+          <h5 class="card-title treatment-card-title">Implants</h5>
+          <p class="card-text treatment-card-text">
+            Dental implant is an artificial tooth root, placed in bone by minor
+            surgery cap is also
+            placed to make it functional. Best solution to replace missing teeth.
+          </p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#prosthodontics" type="button">View details &raquo;</a>
+        </div>
+      </div>
+      <div class="card treatment-card card-color_3 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/braces.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="braces icon" width="160" height="160" style="padding: 10px;"
+          aria-label="braces picture">
+        <div class="card-body">
+          <h5 class="card-title treatment-card-title">Braces</h5>
+          <p class="card-text treatment-card-text">
+            To correct the alignment of crooked, gapped teeth the braces are
+            placed. Braces are the set
+            of wire and brackets. There are many types of braces depending on aesthetics and comfort.
+          </p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#orthodontics" type="button">View details &raquo;</a>
+        </div>
+      </div>
+      <div class="card treatment-card card-color_4 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/caries.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="rotten tooth icon" width="160" height="160" style="padding: 10px;">
+        <div class="card-body">
+          <h5 class="card-title treatment-card-title">Caries</h5>
+          <p class="card-text treatment-card-text">
+            The cavity starts when the teeth are not cleaned properly. The
+            bacterias invade the food
+            lodged and start cavity. At initial level we can cure cavity or caries by doing normal fillings.
+          </p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#periodontics" type="button">View details &raquo;</a>
+        </div>
+      </div>
+      <div class="card treatment-card card-color_5 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/rct-icon.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="root canal icon" width="170" height="170" style="padding: 10px;">
+        <div class="card-body">
+          <h5 class="card-title treatment-card-title">Root Canal</h5>
+          <p class="card-text treatment-card-text">
+            Due to severe cavities you develop pain in tooth. To cure that RCT is
+            done by removing
+            infected nerves and replacing them with artificial material. Can be done in single sitting as well as
+            multiple
+            sittings.
+          </p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#endodontics" type="button">View details &raquo;</a>
+        </div>
+      </div>
+      <div class="card treatment-card card-color_6 col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-2 shadow-sm">
+        <img src="https://images.weserv.nl/?url=https://familydentaldwarka.in/images/pedodentistry.webp&q=80"
+          class="mx-auto card-icon treatment-card-icon" alt="tooth fairy icon" width="170" height="170" style="padding: 10px;">
+        <div class="card-body">
+          <h5 class="card-title treatment-card-title">Pedodontics</h5>
+          <p class="card-text treatment-card-text">Children also require periodic checkups, because milk teeth require
+            equal care and
+            treatment as compared to permanent teeth. To keep your permanent teeth healthy the key is to keep your milk
+            teeth healthy and cavity free.</p>
+        </div>
+        <div class="card-footer treatment-card-footer">
+          <a class="btn btn-secondary" href="/treatments#pedodontics" type="button">View details &raquo;</a>
+        </div>
       </div>
     </div>
-    <div class="card card-color_2 col-12 col-md-6 col-lg-4 col-xl-2">
-      <img src="images/implant.png" class="mx-auto card-icon" alt="..." width="160" height="160"
-        aria-label="implant icon">
-      <div class="card-body" style="border-radius: 5px;">
-        <h5 class="card-title ">Implants</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#prosthodontics" type="button">View details &raquo;</a>
-      </div>
-    </div>
-    <div class="card card-color_3 col-12 col-md-6 col-lg-4 col-xl-2">
-      <img src="images/braces.png" class="mx-auto card-icon " alt="..." width="160" height="160"
-        aria-label="braces picture">
-      <div class="card-body">
-        <h5 class="card-title">Braces</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#orthodontics" type="button">View details &raquo;</a>
-      </div>
-    </div>
-    <div class="card card-color_4 col-12 col-md-6 col-lg-4 col-xl-2">
-      <img src="images\caries.png" class="mx-auto card-icon" alt="..." width="160" height="160">
-      <div class="card-body">
-        <h5 class="card-title">Caries</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#periodontics" type="button">View details &raquo;</a>
-      </div>
-    </div>
-    <div class="card card-color_5 col-12 col-md-6 col-lg-4 col-xl-2">
-      <img src="images/rct-icon.png" class="mx-auto card-icon" alt="..." width="170" height="170" style="padding: 10px;">
-      <div class="card-body">
-        <h5 class="card-title">Root Canal</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#endodontics" type="button">View details &raquo;</a>
-      </div>
-    </div>
-    <div class="card card-color_6 col-12 col-md-6 col-lg-4 col-xl-2 ">
-      <img src="images/pedodentistry.png" class="mx-auto card-icon" alt="..." width="170" height="170" style="padding: 10px;">
-      <div class="card-body">
-        <h5 class="card-title">Pedodontics</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-          This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-        <a class="btn btn-secondary" href="/treatments#pedodontics" type="button">View details &raquo;</a>
-      </div>
-    </div>
-  </div>
 
 
 
 
-  <!-- call to action -->
-  <div class="row justify-content-center align-items-center my-3 py-3 w-100">
-    <div class="col-lg-4 text-center text-lg-start py-3">
-      <h2 class="col-title px-4">MAKE AN APPOINTMENT NOW</h2>
-      <p class="px-4">
-        All staff members of Dental Clinic are licensed professionals. Our staff consists of licensed general dentists.
-      </p>
-    </div>
-    <div class="col-lg-4 text-center text-lg-end">
+    <!-- call to action -->
+    <div class="row justify-content-center align-items-center my-3 py-3 w-100">
+      <div class="col-lg-4 text-center text-lg-start py-3">
+        <h2 class="col-title px-4">MAKE AN APPOINTMENT NOW</h2>
+        <p class="px-4">
+          All staff members of Dental Clinic are licensed professionals. Our staff consists of licensed general
+          dentists.
+        </p>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
         <button type="button" class="btn btn-outline-light call-for-action-btn text-center" data-bs-toggle="modal"
           data-bs-target="#appointmentModal">
           + Book Appointment
         </button>
+      </div>
     </div>
-  </div>
 
+    <hr class="p-0 m-0">
 
+    <!-- Testimonials -->
 
-  <!-- Review Carousel -->
+    <!-- %- include("./partials/testCarousel"); -%> -->
 
- <%- include("./partials/reviewCarousel"); -%>
+    <!-- START THE FEATURETTES -->
 
-  <!-- Testimonials -->
+    <hr class="p-0 m-0">
 
-  <%- include("./partials/testCarousel"); -%>
+    <!-- FOOTER -->
 
-  <!-- START THE FEATURETTES -->
-
-  <hr class="p-0 m-0">
-
-  <!-- FOOTER -->
-
-  <%- include("./partials/footer"); -%>
+    <%- include("./partials/footer"); -%>
